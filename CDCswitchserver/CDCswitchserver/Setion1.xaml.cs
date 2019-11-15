@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace CDCswitchserver
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Setion1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Setion1 : Page
     {
-        public MainWindow()
+        public Setion1()
         {
             InitializeComponent();
-            //Center srceen 
-            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
-
-        #region Event
-        private void Button_MouseDown_Drag(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                this.DragMove();
-            }
-        }
-        #endregion
     }
 }
