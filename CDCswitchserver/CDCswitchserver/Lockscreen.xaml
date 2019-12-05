@@ -1,0 +1,124 @@
+﻿<Window x:Class="CDCswitchserver.Lockscreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CDCswitchserver"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowState="Maximized"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Width="1366"
+        Height="680"
+        Title="Lockscreen">
+    <Window.Resources>
+        <SolidColorBrush
+    x:Key="Visiablecolor">
+            <SolidColorBrush.Color>
+                <Color
+            A="140"
+            R="0"
+            G="0"
+            B="0" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+        <SolidColorBrush
+    x:Key="Toolbarcolor">
+            <SolidColorBrush.Color>
+                <Color
+            A="180"
+            R="0"
+            G="0"
+            B="0" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+    </Window.Resources>
+    <Grid Background="{StaticResource Visiablecolor}">
+        <Grid x:Name="WorkingWall">
+            <materialDesign:Card
+             materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                      Background="White" VerticalAlignment="Center" HorizontalAlignment="Center"  >
+                <Image Width="760"  Source="image/pubgbg.png"/>
+            </materialDesign:Card>
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="10" x:Name="Gridtoolbar">
+                <materialDesign:Card
+                                 x:Name="ToolCard"
+                                 MouseMove="ToolCard_MouseMove"
+                                 MouseDown="ToolCard_MouseDown"
+   
+                                 Background="{StaticResource Toolbarcolor}" BorderBrush="#212121" Foreground="White"
+                                 Padding="8"
+                                 UniformCornerRadius="6">
+                    <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Grid Height="140" Width="250" HorizontalAlignment="Left">
+                            <Button ToolTip="Move forward" Height="40" Width="60" Margin="20" Background="#2196f3" BorderBrush="#2196f3"
+                         VerticalAlignment="Top"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
+                                W
+                            </Button>
+                            <Button ToolTip="Move backward" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
+                                S
+                            </Button>
+                            <Button  ToolTip="Move left" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
+                                                           HorizontalAlignment="Left"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
+                                A
+                            </Button>
+                            <Button ToolTip="Move right" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
+                                                           HorizontalAlignment="Right"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
+                                D
+                            </Button>
+                        </Grid>
+                        <Button ToolTip="Tilt left" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">Q</Button>
+                        <Button ToolTip="Tilt right" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">E</Button>
+                        <Button ToolTip="revice help" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">Z</Button>
+                        <Button ToolTip="lay" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">X</Button>
+                        <Button ToolTip="Sit" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">C</Button>
+                        <Grid Margin="5" Height="60" Width="210">
+                            <Button Width="65" HorizontalAlignment="Left" Background="#FF5722" BorderBrush="#FF5722" Height="40" >CTRL</Button>
+                            <Button  Height="40" Width="70" Background="#FF5722" BorderBrush="#FF5722">SHIFT</Button>
+                            <Button Width="60" HorizontalAlignment="Right" Height="40" Background="#FF5722" BorderBrush="#FF5722">C</Button>
+                        </Grid>
+                        <materialDesign:Card
+   Background="#2196f3" BorderBrush="#2196f3" Foreground="White"
+  Width="200" 
+  Padding="8"
+  UniformCornerRadius="6">
+                            <TextBlock
+    TextWrapping="Wrap">
+Keystrokes Ctrl+Shift+C to exit and Ctrl+Shift+M to unlock the mouse
+
+                            </TextBlock>
+                        </materialDesign:Card>
+                        <materialDesign:Card Margin="10"
+   Background="#2196f3" BorderBrush="#2196f3" Foreground="White"
+  Width="200"
+  Padding="8"
+  UniformCornerRadius="6">
+                            <TextBlock
+    TextWrapping="Wrap">
+What on the mirror screen and enjoy
+                            </TextBlock>
+                        </materialDesign:Card>
+                    </StackPanel>
+                </materialDesign:Card>
+            </Grid>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <Button Background="#FFB300" BorderBrush="#FFB300"
+    Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+    materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="50" Width="50" Margin="10" Foreground="White" >
+                    <materialDesign:PackIcon Kind="LockOutline" />
+                </Button>
+                  <Button Background="#D50000" BorderBrush="#D50000"
+    Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+    materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="50" Width="50" Margin="10" Foreground="White" >
+                    <materialDesign:PackIcon Kind="ExitToApp" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

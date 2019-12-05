@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CDCswitchserver.interfaceUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,25 +17,24 @@ using System.Windows.Shapes;
 namespace CDCswitchserver
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Setion3.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Setion3 : Page, Pageindex
     {
-        public MainWindow()
+        public Setion3()
         {
             InitializeComponent();
-            //Center srceen 
-            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
-        #region Event
-        private void Button_MouseDown_Drag(object sender, MouseButtonEventArgs e)
+        public int getCurrentPageIndex()
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                this.DragMove();
-            }
+            return 3;
         }
-        #endregion
+
+        public void SetBootwindow(Bootwindow bootwindow)
+        {
+            bootwindow.ToRightButton.Visibility = Visibility.Hidden;
+            bootwindow.ToLeftButton.Visibility = Visibility.Visible;
+        }
     }
 }

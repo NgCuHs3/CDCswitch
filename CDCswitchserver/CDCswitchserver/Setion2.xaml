@@ -1,0 +1,56 @@
+﻿<Page x:Class="CDCswitchserver.Setion2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CDCswitchserver"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Height="200" Width="505"
+      Title="Setion2">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <ComboBox SelectionChanged="Listdevice_SelectionChanged" Height="28" Grid.Row="0" HorizontalAlignment="Center" Name="listdevice" VerticalAlignment="Top" Width="160" Margin="4,4,4,0"
+                         materialDesign:HintAssist.Hint="Devices">
+                </ComboBox>
+
+            </Grid>
+            <Border Margin="4" BorderThickness="0.5" BorderBrush="#536DFE">
+                <StackPanel Margin="1">
+                    <TextBlock x:Name="Modeldv" Margin="4">Model</TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Heightdv" Margin="4">Height</TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Widthdv" Margin="4">Width</TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Statusdv" Margin="4" >Status</TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Cpudv" Margin="4" >CPU </TextBlock>
+                </StackPanel>
+            </Border>
+            <Border Margin="4 4 8 4" BorderThickness="0.5" BorderBrush="#536DFE" Grid.Column="2">
+                <StackPanel Margin="1">
+                    <TextBlock x:Name="Apidv" Margin="4">Api </TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Androiddv"  Margin="4">Android</TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Baterrydv" Margin="4">Baterry level</TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Manufacturerdv"  Margin="4" >Manufacturer</TextBlock>
+                </StackPanel>
+              </Border>    
+        </Grid>
+        <TextBlock FontSize="15" Grid.Row="1" TextAlignment="Center">choose a device that you know</TextBlock>
+    </Grid>
+</Page>

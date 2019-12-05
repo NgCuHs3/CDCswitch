@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CDCswitchserver.interfaceUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,17 +13,47 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static ADBTool.ADBTask;
 
 namespace CDCswitchserver
 {
     /// <summary>
     /// Interaction logic for Setion1.xaml
     /// </summary>
-    public partial class Setion1 : Page
+    public partial class Setion1 : Page, Pageindex
     {
         public Setion1()
         {
             InitializeComponent();
+        }
+
+        public int getCurrentPageIndex()
+        {
+            return 1;
+        }
+        public void SetBootwindow(Bootwindow bootwindow)
+        {
+            bootwindow.ToRightButton.Visibility = Visibility.Hidden;
+            bootwindow.ToLeftButton.Visibility = Visibility.Hidden;
+
+            var listdv = bootwindow.TADB.GetDevices();
+            if (listdv.Count() >= 1)
+            {
+                //select the working  device
+                bootwindow.TADB.SetDevice(listdv[0]);
+
+                bootwindow.NaviSetion2();
+            }
+            else
+            {
+                DeviceChange deviceChange = null;
+                deviceChange = (e, s) =>
+                {
+                    bootwindow.NaviSetion2();
+                    bootwindow.TADB.OndeivceConnect -= deviceChange;
+                };
+                bootwindow.TADB.OndeivceConnect += deviceChange;
+            }
         }
     }
 }

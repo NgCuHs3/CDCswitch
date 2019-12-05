@@ -41,6 +41,9 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.6.0.325, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.6.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -61,22 +64,52 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bootwindow.xaml.cs">
+      <DependentUpon>Bootwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="interfaceUI\Pageindex.cs" />
+    <Compile Include="Lockscreen.xaml.cs">
+      <DependentUpon>Lockscreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Setion1.xaml.cs">
       <DependentUpon>Setion1.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Compile Include="Setion2.xaml.cs">
+      <DependentUpon>Setion2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Setion3.xaml.cs">
+      <DependentUpon>Setion3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Setupwindow.xaml.cs">
+      <DependentUpon>Setupwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\ADBTool.cs" />
+    <Compile Include="Tool\Extensioncs.cs" />
+    <Page Include="Bootwindow.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Lockscreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Setion1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Setion2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Setion3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Setupwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,7 +142,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\windowsicon.png" />
+    <Resource Include="image\android.png" />
+    <Resource Include="image\usb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\applaucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\appicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\bgtest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\pubgbg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

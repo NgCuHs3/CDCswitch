@@ -5,10 +5,76 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CDCswitchserver"
       mc:Ignorable="d" 
-      Height="100" Width="505"
+      Height="180" Width="505"
       Title="Setion1">
 
-    <Grid Height="100">
-        <Image Source="image/windowsicon.png"></Image>
+    <Grid Height="180" Width="270">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="image/android.png" Margin="2" Height="120" Width="100" Panel.ZIndex="0">
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.4" AutoReverse="True" From="120" To="180" Storyboard.TargetProperty="Height"/>
+                                        <DoubleAnimation Duration="0:0:0.4" AutoReverse="True" From="100" To="120" Storyboard.TargetProperty="Width"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                    <Image Grid.Column="1" Source="image/usb.png" Margin="20" Height="80" Width="80">
+                        <Image.RenderTransform>
+                            <RotateTransform x:Name="Rt" CenterX="40" CenterY="40"  />
+                        </Image.RenderTransform>
+                        <Image.Style>
+                            <Style>
+                                <Style.Triggers>
+                                    <Trigger Property="Image.IsEnabled" Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation
+                                                          Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                                                          From="0"
+                                                          To="360"
+                                                          Duration="0:0:2"
+                                                          RepeatBehavior="Forever" />
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+
+                    </Image>
+                </Grid>
+            </Grid>
+            <TextBlock
+                VerticalAlignment="Center"
+                 Grid.Row="1" TextAlignment="Center"
+                Text="Connect your android phone to pc  now "
+                Style="{StaticResource MaterialDesignSubheadingTextBlock}">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Duration="0:0:0.3" AutoReverse="True" From="Black" To="Blue" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+        </Grid>
     </Grid>
 </Page>

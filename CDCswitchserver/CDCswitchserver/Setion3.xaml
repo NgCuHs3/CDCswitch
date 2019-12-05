@@ -1,0 +1,23 @@
+﻿<Page x:Class="CDCswitchserver.Setion3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CDCswitchserver"
+      mc:Ignorable="d" 
+      Height="200" 
+       Width="505"
+      Title="Setion3">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock  Grid.Row="1" FontSize="15" HorizontalAlignment="Center">
+             Start cdcswitch client now 
+        </TextBlock>
+        <Grid Grid.Row="0">
+            <Image Source="image/appicon.png" Margin="20"></Image>
+        </Grid>
+    </Grid>
+</Page>

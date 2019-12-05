@@ -1,0 +1,226 @@
+﻿<Window x:Class="CDCswitchserver.setupwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CDCswitchserver"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="setupwindow" Height="605" Width="1105">
+    <materialDesign:Card
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="600" Width="1100">
+        <StackPanel>
+            <materialDesign:ColorZone
+                 Mode="Light"
+                 Background="#2196f3"
+                 MouseDown="Button_MouseDown_Drag"
+                 Padding="5">
+                <Grid>
+                    <Button HorizontalAlignment="Right" Height="30" Width="30" Margin="1"
+                            Background=" #ff0000"
+                            BorderBrush="#ffffff"
+                            Click="Button_Close_Click"
+                              Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+                                 materialDesign:ShadowAssist.ShadowDepth="Depth0">
+                        <materialDesign:PackIcon Kind="Close" Foreground="White" />
+                    </Button>
+                    <Button HorizontalAlignment="Right" Height="30" Width="30" Margin="1 1 38 1"
+                            Click="Button_Minimize_Click"
+                            Background=" #66ff33"
+                            BorderBrush="#ffffff"
+                              Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+                                 materialDesign:ShadowAssist.ShadowDepth="Depth0">
+                        <materialDesign:PackIcon Kind="WindowMinimize" />
+                    </Button>
+                    <TextBlock  VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Foreground="White"
+                                   Style="{StaticResource MaterialDesignButtonTextBlock}">
+                        CDCswitch
+                    </TextBlock>
+                </Grid>
+            </materialDesign:ColorZone>
+            <Grid  Height="558" Width="1100">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <materialDesign:Card VerticalAlignment="Center" HorizontalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth3" Width="760">
+                        <Grid>
+                            <Image Source="image/bgtest.jpg"  HorizontalAlignment="Center"/>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+                <StackPanel Grid.Column="1">
+                    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1"  materialDesign:ShadowAssist.ShadowEdges="All"
+                              Padding="0"                
+                              Height="100" Width="255"
+                              HorizontalAlignment="Right" 
+                              Margin="0 10 10 0 ">
+                        <Grid>
+                            <Button x:Name="StartGame_Button" Background="#90caf9" Margin="1"  HorizontalAlignment="Left" Height="100" Width="190"  FontSize="35"  FontWeight="Heavy" FontStretch="Medium" BorderBrush="{x:Null}" Foreground="White" Padding="0" ToolTip="Start game">
+                                <materialDesign:PackIcon Kind="Play" Height="70" Width="70" />
+                            </Button>
+                            <Button x:Name="Capturescreenclick" Margin="1" Width="65" Height="100" HorizontalAlignment="Right" Background="#bbdefb" BorderBrush="{x:Null}" Padding="0" ToolTip="Load screen capture">
+                                <materialDesign:PackIcon Kind="ImageFilterCenterFocusWeak" Height="50" Width="40" Foreground="White" />
+                            </Button>
+                            <Grid Background="White" Width="2" HorizontalAlignment="Right" Margin="0 0 65 0"></Grid>
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1"  materialDesign:ShadowAssist.ShadowEdges="All"  x:Name="PoCard"
+                              Height="380" Width="255"
+                              HorizontalAlignment="Right" 
+                              Margin="0 10 10 0 " Padding="14">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="1.5*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="1.5*"></RowDefinition>
+                                <RowDefinition Height="3.8*"></RowDefinition>
+                                <RowDefinition Height="0.7*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0"  >
+                                <Border BorderBrush="#1976D2" BorderThickness="1" Margin="0 1 0 4" CornerRadius="2">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border BorderBrush="#1976D2" CornerRadius="1" Width="50" Background="#1976D2">
+                                            <TextBlock VerticalAlignment="Center" Margin="6 0 0 0" FontWeight="ExtraBold" Foreground="White">NAME</TextBlock>
+                                        </Border>
+                                        <Border Background="#1565C0" Width="175" Padding="0">
+                                            <TextBlock x:Name="TextBox_ShowNameControl" VerticalAlignment="Center" Padding="0" Foreground="White" FontWeight="Medium" Margin="10 0 0 0" HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
+                                        </Border>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                            <Grid Grid.Row="1" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="Save"  Grid.Column="0" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Save params" >
+                                    <materialDesign:PackIcon Kind="ContentSave" Height="25" Width="25" Foreground="White"/>
+                                </Button>
+                                <Button x:Name="Cancel" Grid.Column="1" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Cancel job">
+                                    <materialDesign:PackIcon Kind="Cancel" Height="25" Width="25" Foreground="White" />
+                                </Button>
+                                <Button x:Name="Reset" Grid.Column="2" Margin="3 0 0 0" Background="#2196F3" BorderBrush="#2196F3" Padding="0" ToolTip="Reset default">
+                                    <materialDesign:PackIcon Kind="BackupRestore" Height="25" Width="25" Foreground="White" />
+                                </Button>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Slider  TickFrequency="5"
+                                               x:Name="SizeSliderControlHeight"
+                                               Orientation="Horizontal"
+                                               TickPlacement="BottomRight"
+                                               Minimum="50"
+                                               Maximum="150"
+                                               
+                                               Width="210" 
+                                               IsSelectionRangeEnabled="True" />
+                            </Grid>
+                            <Grid Grid.Row="3" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*" ></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox Grid.Column="0"  Margin="5 0 5 5" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Size Percent"   IsReadOnly="True" FontSize="20"></TextBox>
+                                <Grid Grid.Column="1">
+                                    <Button Uid="UpSize"  Height="24" Width="50" Margin="1" VerticalAlignment="Top" Padding="0" Background="#2196F3" BorderBrush="#2196F3">
+                                        <materialDesign:PackIcon  Kind="ChevronUp" Width="40" Height="24"/>
+                                    </Button>
+                                    <Button Uid="DownSize" Height="24" Width="50" Margin="1" VerticalAlignment="Bottom"  Padding="0" Background="#2196F3" BorderBrush="#2196F3">
+                                        <materialDesign:PackIcon Kind="ChevronDown" Height="24" Width="40" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                            <Grid  Grid.Row="4" Height="140"  Width="140"  HorizontalAlignment="Right">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Button Uid="Up" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Top" Padding="0" Margin="0 14 0 0" Background="#2196F3" BorderBrush="#2196F3" >
+                                    <materialDesign:PackIcon Kind="ArrowUpBold" Height="20" Width="20"/>
+                                </Button>
+                                <Button Uid="Down" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 0 14" Padding="0" Background="#2196F3" BorderBrush="#2196F3" >
+                                    <materialDesign:PackIcon Kind="ArrowDownBold" Height="20" Width="20"/>
+                                </Button>
+                                <Button Uid="Left"  Width="35" Height="40" Grid.Column="0" HorizontalAlignment="Right" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" >
+                                    <materialDesign:PackIcon Kind="ArrowLeftBold" Height="20" Width="20"/>
+                                </Button>
+                                <Button Uid="Right"  Width="35" Height="40" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" >
+                                    <materialDesign:PackIcon Kind="ArrowRightBold" Height="20" Width="20"/>
+                                </Button>
+                            </Grid>
+                            <StackPanel  Grid.Row="4" Width="87" Height="140"   HorizontalAlignment="Left"  >
+                                <StackPanel>
+                                    <TextBox Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" x:Name="Left_distance"
+                         materialDesign:HintAssist.Hint="Left distance" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                                    <TextBox  VerticalAlignment="Top" Width="80" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" x:Name="Top_distance"
+                         materialDesign:HintAssist.Hint="Top distance"   
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                                </StackPanel>
+                                <ToggleButton x:Name="ToogleKeyButton" VerticalAlignment="Center"
+                         Style="{StaticResource MaterialDesignActionToggleButton}"
+                         ToolTip="Working Key" Height="48" Width="48" Margin="0 7 0 0" Background="#2196f3">
+                                    <ToggleButton.Content>
+                                        <Binding Path="FontKey"/>
+                                    </ToggleButton.Content>
+                                    <materialDesign:ToggleButtonAssist.OnContent>
+                                        <Binding Path="BehindKkey"/>
+                                    </materialDesign:ToggleButtonAssist.OnContent>
+                                </ToggleButton>
+                            </StackPanel>
+                            <Grid Grid.Row="5">
+                                <Border VerticalAlignment="Top" Height="1" Background="#2196f3" CornerRadius="1"></Border>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" x:Name="VehicleCheckbox" IsChecked="False" Background="#2196f3"  VerticalAlignment="Center">
+                                        <TextBlock FontSize="14">Vehicle</TextBlock>
+                                    </CheckBox>
+                                    <CheckBox  Grid.Column="1" x:Name="ControlCheckbox" IsChecked="True" Background="#2196f3" VerticalAlignment="Center">
+                                        <TextBlock FontSize="14">Control</TextBlock>
+                                    </CheckBox>
+                                    <CheckBox  Grid.Column="2" x:Name="SwimCheckbox" IsChecked="False" Background="#2196f3"  VerticalAlignment="Center">
+                                        <TextBlock FontSize="14">Swim</TextBlock>
+                                    </CheckBox>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1"  materialDesign:ShadowAssist.ShadowEdges="All"
+                              Height="45" Width="255"
+                              HorizontalAlignment="Right" 
+                              Padding="0"                      
+                              Margin="0 5 10 0 ">
+                        <Grid Background="#64b5f6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="OpenFunction_Menu" Height="42"  Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" >
+                                <materialDesign:PackIcon Kind="Function" Height="40" Width="40" Foreground="White" />
+                            </Button>
+                            <Button  x:Name="OpenMore_Menu" Grid.Column="1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="42" Padding="0">
+                                <materialDesign:PackIcon Kind="Settings" Height="40" Width="40" Foreground="White"/>
+                            </Button>
+                        </Grid>
+                    </materialDesign:Card>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </materialDesign:Card>
+</Window>
