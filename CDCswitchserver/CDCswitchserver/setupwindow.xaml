@@ -4,13 +4,233 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CDCswitchserver"
+        xmlns:functionkeymodel="clr-namespace:CDCswitchserver.interfaceUI"
+        xmlns:converterna="clr-namespace:CDCswitchserver.Converter"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        ContentRendered="Window_ContentRendered"
         Title="setupwindow" Height="605" Width="1105">
+    <Window.Resources>
+        <Storyboard x:Key="OpenMenu_Function">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="Menu_Function">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.08" Value="270"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu_Function">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="Menu_Function">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.08" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OpenMenu_More">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="Menu_More">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.08" Value="270"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu_More">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="Menu_More">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.08" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+       
+        <!--Control style -->
+        <Style x:Key="Controlct" TargetType="{x:Type Button}">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <EventSetter Event="UIElement.PreviewMouseMove" Handler="BtImage_MouseMovePre"/>
+            <EventSetter Event="PreviewMouseDown" Handler="BtImage_MouseDownPre"/>
+            <EventSetter Event="SizeChanged" Handler="Buttonct_SizeChanged"/>
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid>
+                            <Grid.Resources>
+                                <SolidColorBrush x:Key="BFcnt" Color="White" Opacity="0.4"/>
+                            </Grid.Resources>
+                            <Border x:Name="circularBorder" 
+                              CornerRadius="{Binding ActualHeight, ElementName=circularBorder}"  BorderThickness="1" BorderBrush="Yellow"
+                              Width="{Binding ActualHeight, ElementName=circularBorder}">
+                                <Ellipse  Fill="{StaticResource ResourceKey=BFcnt}"/>
+                            </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=ControlCheckbox,Path=IsChecked}" Value="true">
+                    <Setter Property="Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ControlctChoose" TargetType="{x:Type Button}">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <EventSetter Event="UIElement.PreviewMouseMove" Handler="BtImage_MouseMovePre"/>
+            <EventSetter Event="PreviewMouseDown" Handler="BtImage_MouseDownPre"/>
+            <EventSetter Event="SizeChanged" Handler="Buttonct_SizeChanged"/>
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid >
+                            <Grid.Resources>
+                                <SolidColorBrush x:Key="BFcnt" Color="White" Opacity="0.7"/>
+                            </Grid.Resources>
+                            <Border x:Name="circularBorder" 
+   CornerRadius="{Binding ActualHeight, ElementName=circularBorder}"  BorderThickness="2" BorderBrush="#81d4fa"
+   Width="{Binding ActualHeight, ElementName=circularBorder}">
+                                <Ellipse  Fill="{StaticResource ResourceKey=BFcnt}"/>
+                            </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=ControlCheckbox,Path=IsChecked}" Value="true">
+                    <Setter Property="Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="VehicleControlct" TargetType="{x:Type Button}">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <EventSetter Event="UIElement.PreviewMouseMove" Handler="BtImage_MouseMovePre"/>
+            <EventSetter Event="PreviewMouseDown" Handler="BtImage_MouseDownPre"/>
+            <EventSetter Event="SizeChanged" Handler="Buttonct_SizeChanged"/>
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid>
+                            <Grid.Resources>
+                                <SolidColorBrush x:Key="BFcnt" Color="White" Opacity="0.4"/>
+                            </Grid.Resources>
+                            <Border x:Name="circularBorder" 
+                              CornerRadius="{Binding ActualHeight, ElementName=circularBorder}"  BorderThickness="1" BorderBrush="Yellow"
+                              Width="{Binding ActualHeight, ElementName=circularBorder}">
+                                <Ellipse  Fill="{StaticResource ResourceKey=BFcnt}"/>
+                            </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=VehicleCheckbox,Path=IsChecked}" Value="true">
+                    <Setter Property="Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="VehicleControlctChoose" TargetType="{x:Type Button}">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <EventSetter Event="UIElement.PreviewMouseMove" Handler="BtImage_MouseMovePre"/>
+            <EventSetter Event="PreviewMouseDown" Handler="BtImage_MouseDownPre"/>
+            <EventSetter Event="SizeChanged" Handler="Buttonct_SizeChanged"/>
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid >
+                            <Grid.Resources>
+                                <SolidColorBrush x:Key="BFcnt" Color="White" Opacity="0.7"/>
+                            </Grid.Resources>
+                            <Border x:Name="circularBorder" 
+   CornerRadius="{Binding ActualHeight, ElementName=circularBorder}"  BorderThickness="2" BorderBrush="#81d4fa"
+   Width="{Binding ActualHeight, ElementName=circularBorder}">
+                                <Ellipse  Fill="{StaticResource ResourceKey=BFcnt}"/>
+                            </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=VehicleCheckbox,Path=IsChecked}" Value="true">
+                    <Setter Property="Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SwimControlct" TargetType="{x:Type Button}">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <EventSetter Event="UIElement.PreviewMouseMove" Handler="BtImage_MouseMovePre"/>
+            <EventSetter Event="PreviewMouseDown" Handler="BtImage_MouseDownPre"/>
+            <EventSetter Event="SizeChanged" Handler="Buttonct_SizeChanged"/>
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid>
+                            <Grid.Resources>
+                                <SolidColorBrush x:Key="BFcnt" Color="White" Opacity="0.4"/>
+                            </Grid.Resources>
+                            <Border x:Name="circularBorder" 
+                              CornerRadius="{Binding ActualHeight, ElementName=circularBorder}"  BorderThickness="1" BorderBrush="Yellow"
+                              Width="{Binding ActualHeight, ElementName=circularBorder}">
+                                <Ellipse  Fill="{StaticResource ResourceKey=BFcnt}"/>
+                            </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=SwimCheckbox,Path=IsChecked}" Value="true">
+                    <Setter Property="Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SwimControlctChoose" TargetType="{x:Type Button}">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <EventSetter Event="UIElement.PreviewMouseMove" Handler="BtImage_MouseMovePre"/>
+            <EventSetter Event="PreviewMouseDown" Handler="BtImage_MouseDownPre"/>
+            <EventSetter Event="SizeChanged" Handler="Buttonct_SizeChanged"/>
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid >
+                            <Grid.Resources>
+                                <SolidColorBrush x:Key="BFcnt" Color="White" Opacity="0.7"/>
+                            </Grid.Resources>
+                            <Border x:Name="circularBorder" 
+   CornerRadius="{Binding ActualHeight, ElementName=circularBorder}"  BorderThickness="2" BorderBrush="#81d4fa"
+   Width="{Binding ActualHeight, ElementName=circularBorder}">
+                                <Ellipse  Fill="{StaticResource ResourceKey=BFcnt}"/>
+                            </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=SwimCheckbox,Path=IsChecked}" Value="true">
+                    <Setter Property="Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <!--Converter-->
+        <converterna:SliderScoreSizeCoverter x:Key="SliderCoverter"/>
+        <converterna:Aroundslider x:Key="Aroundsliders"/>
+    </Window.Resources>
     <materialDesign:Card
         VerticalAlignment="Center"
         HorizontalAlignment="Center"
@@ -52,11 +272,141 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <materialDesign:Card VerticalAlignment="Center" HorizontalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth3" Width="760">
-                        <Grid>
-                            <Image Source="image/bgtest.jpg"  HorizontalAlignment="Center"/>
+                    <materialDesign:Card x:Name="ControlsCard"  VerticalAlignment="Center" HorizontalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth3" Width="760" Height="427.5">
+                        <Grid x:Name="MangagerControl_PS">
+                            <Image x:Name="Mirrorscreen" Source="image/themeUIdesign.jpg"  HorizontalAlignment="Center" />
+                            <!--Main control-->
+                            <Button Uid="1" x:Name="JOY_STICK" Margin="68 248 0 0" Height="85" Width="85"  Style="{StaticResource ControlctChoose}" >
+                                <Image  Source="imagecontrol/fourvetor.png"/>
+                            </Button>
+                            <Button Uid="2" x:Name="MOUSE_VIEW" Margin="300 150 0 0" Height="50" Width="50"  Style="{StaticResource Controlct}" >
+                                <Image  Source="imagecontrol/mouseview.png" Margin="4"/>
+                            </Button>
+                            <Button Uid="3" x:Name="FIRE_BUTTON_R" Height="54" Width="54" Style="{StaticResource  Controlct}" Margin="557 263 0 0" >
+                                <Image Source="imagecontrol/bullet.png" Margin="4 4 4 4"/>
+                            </Button>
+                            <Button Uid="4" x:Name="TPPORFPP" Height="24" Width="24" Style="{StaticResource Controlct}"  Margin="500 0 0 0">
+                                <Image Source="imagecontrol/switch.png" Margin="3"/>
+                            </Button>
+                            <Button Uid="24" x:Name="OPEN_MAP" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="720 0 0 0">
+                                <Image Source="imagecontrol/map.png" Margin="5"/>
+                            </Button>
+                            <Button Uid="5" x:Name="LAY_BUTTON"  Height="37" Width="37"  Style="{StaticResource Controlct}" Margin="615 340 0 0">
+                                <Image Source="imagecontrol/zying.png" Margin="2 0 2 0"/>
+                            </Button>
+                            <Button Uid="6" x:Name="SIT_BUTTON" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="562 340 0 0">
+                                <Image Source="imagecontrol/kneel.png" Margin="5 5 5 5" />
+                            </Button>
+                            <Button Uid="7"  x:Name="SCOPE_ON_OF" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="640 183 0 0">
+                                <Image Source="imagecontrol/target.png" Margin="1"/>
+                            </Button>
+                            <Button Uid="8" x:Name="LOAD_BULLET" Height="31" Width="31" Style="{StaticResource Controlct}" Margin="509 347 0 0">
+                                <Image Source="imagecontrol/refresh.png" Margin="2 4 4 4"/>
+                            </Button>
+                            <Button Uid="9" x:Name="JUMP_BUTTON" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="640 245 0 0">
+                                <Image Source="imagecontrol/jump.png" Margin=" 4 4 4 4"/>
+                            </Button>
+                            <Button Uid="10" x:Name="TILT_LEFT_BUTTON" Height="32" Width="32" Style="{StaticResource Controlct}" Margin="78 125 0 0">
+                                <Image Source="imagecontrol/tiltleft.png" Margin="0 0 3 3"/>
+                            </Button>
+                            <Button Uid="11" x:Name="TILT_RIGHT_BUTTON" Height="31" Width="31" Style="{StaticResource Controlct}" Margin="135 125 0 0">
+                                <Image Source="imagecontrol/tiltright.png" Margin="3 0 0 3"/>
+                            </Button>
+                            <Button Uid="14" x:Name="EXIT_VEHICLE" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="609 131 0 0">
+                                <Image Source="imagecontrol/exit.png"  Margin="6 4 4 4"/>
+                            </Button>
+                            <Button Uid="15" x:Name="DRIVE_VEHICLE" Height="32" Width="32" Style="{StaticResource Controlct}" Margin="450 147 0 0">
+                                <Image Source="imagecontrol/driving.png" Margin="3"/>
+                            </Button>
+                            <Button Uid="16" x:Name="GET_INT_VEHICLE" Height="32" Width="32" Style="{StaticResource Controlct}" Margin="450 193 0 0">
+                                <Image Source="imagecontrol/getin.png" Margin="4"/>
+                            </Button>
+                            <Button Uid="17" x:Name="OPEN_CLOSE_DOOR" Height="32" Width="32" Style="{StaticResource Controlct}" Margin="450 250 0 0">
+                                <Image Source="imagecontrol/door.png" Margin="2"/>
+                            </Button>
+                            <Button Uid="18" x:Name="CANNCEL_BOM" Height="41" Width="41" Style="{StaticResource Controlct}" Margin="150 185 0 0">
+                                <Image Source="imagecontrol/cancel.png" Margin="3"/>
+                            </Button>
+                            <Button Uid="19" x:Name="REVICE" Height="41" Width="41" Style="{StaticResource Controlct}" Margin="323 216 0 0 ">
+                                <Image Source="imagecontrol/add.png" Margin="3" />
+                            </Button>
+                            <Button Uid="20" x:Name="GUN_FIRST" Height="35" Width="35" Style="{StaticResource Controlct}" Margin="280 330 0 0">
+                                <Image Source="imagecontrol/firstgun.png" Margin="2"/>
+                            </Button>
+                            <Button Uid="21" x:Name="GUN_SECOND" Height="35" Width="35" Style="{StaticResource Controlct}" Margin="370 330 0 0">
+                                <Image Source="imagecontrol/secondgun.png" Margin="2"/>
+                            </Button>
+                            <Button Uid="22" x:Name="BOMB" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="454 300 0 0">
+                                <Image Source="imagecontrol/bomb.png" Margin="3"/>
+                            </Button>
+                            <Button Uid="23" x:Name="ADD_BLOOD" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="195 300 0 0">
+                                <Image Source="imagecontrol/aidkit.png" Margin="6"/>
+                            </Button>
+                            <Button Uid="25" x:Name="OPEN_BAG" Height="31" Width="31" Style="{StaticResource Controlct}" Margin="35 336 0 0">
+                                <Image Source="imagecontrol/bag.png" Margin="5"/>
+                            </Button>
+                            <Button Uid="26" x:Name="SETTING" Height="20" Width="20" Style="{StaticResource Controlct}" Margin="570 2 0 0">
+                                <Image Source="imagecontrol/settings.png" Margin="2"/>
+                            </Button>
+                            <Button Uid="28" x:Name="MOUSE_EYE" Height="25" Width="25" Style="{StaticResource Controlct}" Margin="519 108 0 0">
+                                <Image Source="imagecontrol/eye.png" Margin="2 0 2 0" />
+                            </Button>
+                            <Button Uid="30" x:Name="HOLD_BOX" Height="37" Width="37" Style="{StaticResource Controlct}" Margin="445 90 0 0">
+                                <Image Source="imagecontrol/hold.png" Margin="4 3 0 3"/>
+                            </Button>
+                            <Button Uid="12" x:Name="GUN_THIRD" Height="30" Width="30" Style="{StaticResource Controlct}" Margin="406 307 0 0">
+                                <Image Source="imagecontrol/gunthird.png" Margin="2"></Image>
+                            </Button>
+                            <Button Uid="36" x:Name="PARACHUTE" Height="50" Width="50" Style="{StaticResource Controlct}" Margin="200 200 0 0">
+                                <Image Source="imagecontrol/parachute.png" Margin="3.5"/>
+                            </Button>
+                            <Button Uid="27" x:Name="TAKE" Height="38" Width="38"  Style="{StaticResource Controlct}" Margin="550 80 0 0">
+                                <Image Source="imagecontrol/catch.png" Margin="5"/>
+                            </Button>
+                            <Button Uid="29" x:Name="QUICKCHAT" Height="38" Width="38"  Style="{StaticResource Controlct}" Margin="690 135 0 0">
+                                <Image Source="imagecontrol/comment.png" Margin="7"/>
+                            </Button>
+                            <!--Vehicle control-->
+                            <Button Uid="13" x:Name="VEHICLECHANGESIT" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="620 330 0 0">
+                                <Image Source="imagecontrol/changesit.png" Margin="5"/>
+                            </Button>
+                            <Button Uid="31" x:Name="VEHICLEBOOSTER" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="150 200 0 0 " RenderTransformOrigin="0.65,0">
+                                <Image Source="imagecontrol/boost.png" Margin="8"/>
+                            </Button>
+                            <Button Uid="32" x:Name="VEHICLEBRAKE" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="50 200 0 0 " RenderTransformOrigin="0.65,0">
+                                <Image Source="imagecontrol/brake.png" Margin="5.5"/>
+                            </Button>
+                            <Button Uid="33" x:Name="VEHICLERIGHT" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="600 200 0 0 " RenderTransformOrigin="0.65,0">
+                                <Image Source="imagecontrol/right.png" Margin="5.5"/>
+                            </Button>
+                            <Button Uid="34" x:Name="VEHICLELEFT" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="450 200 0 0 " RenderTransformOrigin="0.65,0">
+                                <Image Source="imagecontrol/left.png" Margin="5.5"/>
+                            </Button>
+                            <Button Uid="35" x:Name="VEHICLELOOKOUT" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="450 300 0 0 " RenderTransformOrigin="0.65,0">
+                                <Image Source="imagecontrol/lookout.png" Margin="9"/>
+                            </Button>
+                            <Button Uid="37" x:Name="VEHICLEUP" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="150 150 0 0 " RenderTransformOrigin="0.65,0">
+                                <Image Source="imagecontrol/up.png" Margin="5"/>
+                            </Button>
+                            <Button Uid="38" x:Name="VEHICLEDOWN" Height="50" Width="50" Style="{StaticResource VehicleControlct}" Margin="150 300 0 0 " RenderTransformOrigin="0.65,0">
+                                <Image Source="imagecontrol/down.png" Margin="5"/>
+                            </Button>
+                            <!--Swiming control-->
+                            <Button Uid="39" x:Name="SWIMUP" Height="50" Width="50" Style="{StaticResource SwimControlct}" Margin="500 200 0 0 ">
+                                <Image Source="imagecontrol/upswim.png" Margin="6"/>
+                            </Button>
+                            <Button Uid="40" x:Name="SWIMDOWN" Height="50" Width="50" Style="{StaticResource SwimControlct}" Margin="500 300 0 0 ">
+                                <Image Source="imagecontrol/downswim.png" Margin="8"/>
+                            </Button>
                         </Grid>
                     </materialDesign:Card>
+                    <!-- Snacker bar-->
+                    <materialDesign:Snackbar
+                     IsActive="False" 
+                     x:Name="InfoSnackbar">
+                        <materialDesign:SnackbarMessage x:Name="InfoSnackbar_Content" ActionClick="SnackbarMessage_ActionClick"
+                     ActionContent="HIDE" Content="HELLO" FontSize="30" />
+                    </materialDesign:Snackbar>
                 </Grid>
                 <StackPanel Grid.Column="1">
                     <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1"  materialDesign:ShadowAssist.ShadowEdges="All"
@@ -65,10 +415,10 @@
                               HorizontalAlignment="Right" 
                               Margin="0 10 10 0 ">
                         <Grid>
-                            <Button x:Name="StartGame_Button" Background="#90caf9" Margin="1"  HorizontalAlignment="Left" Height="100" Width="190"  FontSize="35"  FontWeight="Heavy" FontStretch="Medium" BorderBrush="{x:Null}" Foreground="White" Padding="0" ToolTip="Start game">
+                            <Button x:Name="StartGame_Button" Background="#90caf9" Margin="1"  HorizontalAlignment="Left" Height="100" Width="190"  FontSize="35"  FontWeight="Heavy" FontStretch="Medium" BorderBrush="{x:Null}" Foreground="White" Padding="0" ToolTip="Start game" Click="StartGame_Button_Click">
                                 <materialDesign:PackIcon Kind="Play" Height="70" Width="70" />
                             </Button>
-                            <Button x:Name="Capturescreenclick" Margin="1" Width="65" Height="100" HorizontalAlignment="Right" Background="#bbdefb" BorderBrush="{x:Null}" Padding="0" ToolTip="Load screen capture">
+                            <Button x:Name="Capturescreenclick" Margin="1" Width="65" Height="100" HorizontalAlignment="Right" Background="#bbdefb" BorderBrush="{x:Null}" Padding="0" ToolTip="Load screen capture" Click="Capturescreenclick_Click">
                                 <materialDesign:PackIcon Kind="ImageFilterCenterFocusWeak" Height="50" Width="40" Foreground="White" />
                             </Button>
                             <Grid Background="White" Width="2" HorizontalAlignment="Right" Margin="0 0 65 0"></Grid>
@@ -105,13 +455,13 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Button x:Name="Save"  Grid.Column="0" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Save params" >
+                                <Button x:Name="Save"  Grid.Column="0" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Save params" Click="Save_Click">
                                     <materialDesign:PackIcon Kind="ContentSave" Height="25" Width="25" Foreground="White"/>
                                 </Button>
-                                <Button x:Name="Cancel" Grid.Column="1" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Cancel job">
+                                <Button x:Name="Cancel" Grid.Column="1" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Cancel job" Click="Cancel_Click">
                                     <materialDesign:PackIcon Kind="Cancel" Height="25" Width="25" Foreground="White" />
                                 </Button>
-                                <Button x:Name="Reset" Grid.Column="2" Margin="3 0 0 0" Background="#2196F3" BorderBrush="#2196F3" Padding="0" ToolTip="Reset default">
+                                <Button x:Name="Reset" Grid.Column="2" Margin="3 0 0 0" Background="#2196F3" BorderBrush="#2196F3" Padding="0" ToolTip="Reset default" Click="Reset_Click">
                                     <materialDesign:PackIcon Kind="BackupRestore" Height="25" Width="25" Foreground="White" />
                                 </Button>
                             </Grid>
@@ -122,7 +472,7 @@
                                                TickPlacement="BottomRight"
                                                Minimum="50"
                                                Maximum="150"
-                                               
+                                               Value="{Binding Height,Mode=TwoWay,Converter={StaticResource SliderCoverter},UpdateSourceTrigger=PropertyChanged}"
                                                Width="210" 
                                                IsSelectionRangeEnabled="True" />
                             </Grid>
@@ -131,12 +481,12 @@
                                     <ColumnDefinition Width="1.5*"></ColumnDefinition>
                                     <ColumnDefinition Width="1*" ></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox Grid.Column="0"  Margin="5 0 5 5" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Size Percent"   IsReadOnly="True" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="0"  Margin="5 0 5 5" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Size Percent" Text="{Binding ElementName=SizeSliderControlHeight,Path=Value,Converter={StaticResource Aroundsliders}}"  IsReadOnly="True" FontSize="20"></TextBox>
                                 <Grid Grid.Column="1">
-                                    <Button Uid="UpSize"  Height="24" Width="50" Margin="1" VerticalAlignment="Top" Padding="0" Background="#2196F3" BorderBrush="#2196F3">
+                                    <Button Uid="UpSize"  Height="24" Width="50" Margin="1" VerticalAlignment="Top" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Upsize_Click">
                                         <materialDesign:PackIcon  Kind="ChevronUp" Width="40" Height="24"/>
                                     </Button>
-                                    <Button Uid="DownSize" Height="24" Width="50" Margin="1" VerticalAlignment="Bottom"  Padding="0" Background="#2196F3" BorderBrush="#2196F3">
+                                    <Button Uid="DownSize" Height="24" Width="50" Margin="1" VerticalAlignment="Bottom"  Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Downsize_Click">
                                         <materialDesign:PackIcon Kind="ChevronDown" Height="24" Width="40" />
                                     </Button>
                                 </Grid>
@@ -147,25 +497,25 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Button Uid="Up" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Top" Padding="0" Margin="0 14 0 0" Background="#2196F3" BorderBrush="#2196F3" >
+                                <Button Name="Up" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Top" Padding="0" Margin="0 14 0 0" Background="#2196F3" BorderBrush="#2196F3"  Click="Up_Click">
                                     <materialDesign:PackIcon Kind="ArrowUpBold" Height="20" Width="20"/>
                                 </Button>
-                                <Button Uid="Down" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 0 14" Padding="0" Background="#2196F3" BorderBrush="#2196F3" >
+                                <Button Name="Down" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 0 14" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Down_Click" >
                                     <materialDesign:PackIcon Kind="ArrowDownBold" Height="20" Width="20"/>
                                 </Button>
-                                <Button Uid="Left"  Width="35" Height="40" Grid.Column="0" HorizontalAlignment="Right" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" >
+                                <Button Name="Left"  Width="35" Height="40" Grid.Column="0" HorizontalAlignment="Right" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Left_Click">
                                     <materialDesign:PackIcon Kind="ArrowLeftBold" Height="20" Width="20"/>
                                 </Button>
-                                <Button Uid="Right"  Width="35" Height="40" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" >
+                                <Button Name="Right"  Width="35" Height="40" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Right_Click">
                                     <materialDesign:PackIcon Kind="ArrowRightBold" Height="20" Width="20"/>
                                 </Button>
                             </Grid>
                             <StackPanel  Grid.Row="4" Width="87" Height="140"   HorizontalAlignment="Left"  >
                                 <StackPanel>
-                                    <TextBox Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" x:Name="Left_distance"
+                                    <TextBox Width="80" VerticalAlignment="Top" Text="{Binding Margin.Left,Mode=TwoWay}"  HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" x:Name="Left_distance"
                          materialDesign:HintAssist.Hint="Left distance" 
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                                    <TextBox  VerticalAlignment="Top" Width="80" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" x:Name="Top_distance"
+                                    <TextBox  VerticalAlignment="Top" Width="80" HorizontalAlignment="Left" Text="{Binding Margin.Top,Mode=TwoWay}" Margin="5 0 0 0" FontSize="14" x:Name="Top_distance"
                          materialDesign:HintAssist.Hint="Top distance"   
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                                 </StackPanel>
@@ -173,10 +523,10 @@
                          Style="{StaticResource MaterialDesignActionToggleButton}"
                          ToolTip="Working Key" Height="48" Width="48" Margin="0 7 0 0" Background="#2196f3">
                                     <ToggleButton.Content>
-                                        <Binding Path="FontKey"/>
+                                        <Binding Path="Fontkey"/>
                                     </ToggleButton.Content>
                                     <materialDesign:ToggleButtonAssist.OnContent>
-                                        <Binding Path="BehindKkey"/>
+                                        <Binding Path="Behindkey"/>
                                     </materialDesign:ToggleButtonAssist.OnContent>
                                 </ToggleButton>
                             </StackPanel>
@@ -213,13 +563,133 @@
                             </Grid.ColumnDefinitions>
                             <Button x:Name="OpenFunction_Menu" Height="42"  Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" >
                                 <materialDesign:PackIcon Kind="Function" Height="40" Width="40" Foreground="White" />
+                                <Button.Triggers>
+                                    <EventTrigger RoutedEvent="ButtonBase.Click">
+                                        <BeginStoryboard Storyboard="{StaticResource OpenMenu_Function}"/>
+                                    </EventTrigger>
+                                </Button.Triggers>
                             </Button>
                             <Button  x:Name="OpenMore_Menu" Grid.Column="1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="42" Padding="0">
                                 <materialDesign:PackIcon Kind="Settings" Height="40" Width="40" Foreground="White"/>
+                                <Button.Triggers>
+                                    <EventTrigger RoutedEvent="ButtonBase.Click">
+                                        <BeginStoryboard Storyboard="{StaticResource OpenMenu_More}"/>
+                                    </EventTrigger>
+                                </Button.Triggers>
                             </Button>
                         </Grid>
                     </materialDesign:Card>
                 </StackPanel>
+                <Grid Grid.Column="1"  HorizontalAlignment="Right" Width="0" x:Name="Menu_Function" Background="White">
+                    <StackPanel>
+                        <Border Margin="8" BorderThickness="1" BorderBrush="#2196f3">
+                            <Button Background="{x:Null}" BorderBrush="{x:Null}" Height="50">
+                                <Button.Triggers>
+                                    <EventTrigger RoutedEvent="ButtonBase.Click">
+                                        <BeginStoryboard Storyboard="{StaticResource CloseMenu_Function}"/>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                                <materialDesign:PackIcon Kind="ChevronDoubleRight" Height="40" Width="40" Foreground="#2196f3"/>
+                            </Button>
+                        </Border>
+                        <Border Margin="10 0 10 10" Height="430" BorderThickness="1" BorderBrush="#2196f3" Padding="2">
+                            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                                <StackPanel>
+                                    <Grid Height="40">
+                                        <CheckBox x:Name="ALLOWMIRRORSCREEN" HorizontalAlignment="Center" Content="Allow screen mirroring"></CheckBox>
+                                    </Grid>
+                                    <Border BorderThickness="0.5" BorderBrush="#2196f3" Margin="4"></Border>
+                                    <StackPanel Margin="0 5 0 5">
+                                        <TextBlock HorizontalAlignment="Center" Margin="2" >Opacity of the mirror</TextBlock>
+                                        <Slider x:Name="OPACITYOFMIRROR" Margin="5 4 5 4" TickFrequency="5" Orientation="Horizontal"  TickPlacement="BottomRight"  Minimum="1"  Maximum="100" Value="100"  IsSelectionRangeEnabled="true" />
+                                    </StackPanel>
+                                    <Border BorderThickness="0.5" BorderBrush="#2196f3" Margin="4"></Border>
+                                    <StackPanel Margin="0 5 0 5" Height="60" Orientation="Horizontal">
+                                        <Button Margin="5" Height="40" Width="40" x:Name="Choosepattdialog" Click="Choosepattdialog_Click"
+  Style="{StaticResource MaterialDesignFloatingActionButton}"
+  materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+  materialDesign:ButtonProgressAssist.Value="-1"
+  materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+  Content="{materialDesign:PackIcon DotsHorizontal}" />
+                                        <TextBox VerticalAlignment="Center" Margin="10" x:Name="PATHSAVESNAPSHOOT" IsReadOnly="True"
+  materialDesign:HintAssist.Hint="Path save screenshot" Width="150" Text="Documents"
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </StackPanel>
+                                    <Border BorderThickness="0.5" BorderBrush="#2196f3" Margin="4"></Border>
+                                    
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Border>
+                        <Grid  VerticalAlignment="Center" Margin="10 0 10 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="Saveuser"  Grid.Column="0" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Save params" Click="Saveuser_Click" >
+                                <materialDesign:PackIcon Kind="ContentSave" Height="25" Width="25" Foreground="White"/>
+                            </Button>
+                            <Button x:Name="Canceluser" Grid.Column="1" Margin="0 0 7 0" Padding="0" Background="#2196F3" BorderBrush="#2196F3" ToolTip="Cancel job" Click="Canceluser_Click" >
+                                <materialDesign:PackIcon Kind="Cancel" Height="25" Width="25" Foreground="White" />
+                            </Button>
+                            <Button x:Name="Resetuser" Grid.Column="2" Margin="3 0 0 0" Background="#2196F3" BorderBrush="#2196F3" Padding="0" ToolTip="Reset default" Click="Resetuser_Click">
+                                <materialDesign:PackIcon Kind="BackupRestore" Height="25" Width="25" Foreground="White" />
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1"  HorizontalAlignment="Right" Width="0" x:Name="Menu_More" Background="White">
+                    <StackPanel>
+                        <Border Margin="8" BorderThickness="1" BorderBrush="#2196f3">
+                            <Button Background="{x:Null}" BorderBrush="{x:Null}" Height="50">
+                                <Button.Triggers>
+                                    <EventTrigger RoutedEvent="ButtonBase.Click">
+                                        <BeginStoryboard Storyboard="{StaticResource CloseMenu_More}"/>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                                <materialDesign:PackIcon Kind="ChevronDoubleRight" Height="40" Width="40" Foreground="#2196f3"/>
+                            </Button>
+                        </Border>
+                        <Border Margin="10 0 10 10" Height="480" BorderThickness="1" BorderBrush="#2196f3" Padding="2">
+                            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                                <ItemsControl x:Name="FunctionListView"
+                                      Grid.IsSharedSizeScope="True">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate DataType="{x:Type functionkeymodel:FunctionkeyModel}">
+                                            <Border
+                                        x:Uid="Border"
+                                        Padding="8"
+                                        BorderThickness="0 0 0 1"
+                                        BorderBrush="{DynamicResource MaterialDesignDivider}">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition SharedSizeGroup="Checkerz"/>
+                                                        <ColumnDefinition></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ToggleButton VerticalAlignment="Center"
+                                                          Foreground="#448AFF"
+                                                          Background="#BBDEFB"
+                                                          IsChecked="True"
+                                                 Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
+                                                          Content="{Binding Key}"/>
+                                                    <StackPanel
+                                                Margin="8 0 0 0"
+                                                Grid.Column="1">
+                                                        <TextBlock
+                                                    FontWeight="Bold"
+                                                    Text="{Binding Name}"/>
+                                                        <TextBlock
+                                                    Text="{Binding Description}"/>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+                        </Border>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </StackPanel>
     </materialDesign:Card>

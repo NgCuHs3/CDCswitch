@@ -8,8 +8,145 @@
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="AvailableLibraryUpdateStorage">
+    <library-updates>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>appcompat-v7</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>design</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>support-v4</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support.constraint</group-id>
+        <name>constraint-layout</name>
+        <version>2.0.0-beta4</version>
+        <repository>Google</repository>
+      </library-update>
+      <library-update>
+        <group-id>junit</group-id>
+        <name>junit</name>
+        <version>4.13</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support.test</group-id>
+        <name>runner</name>
+        <version>1.0.2</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support.test.espresso</group-id>
+        <name>espresso-core</name>
+        <version>3.0.2</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+    </library-updates>
+    <last-search-timestamp>1578732922525</last-search-timestamp>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff591743-e306-4f4c-a440-e7f14338a6c8" name="Default Changelist" comment="" />
+    <list default="true" id="ff591743-e306-4f4c-a440-e7f14338a6c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/CDCswitchserver.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/CDCswitchserver.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion1.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion1.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setupwindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setupwindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Tool/ADBTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Tool/ADBTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Tool/Extensioncs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/appicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/appicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/bgtest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/pubgbg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/interfaceUI/pageindex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/interfaceUI/pageindex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_Content.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_Content.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/setupwindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/setupwindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/setupwindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/setupwindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Viewstepadapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienthree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mientwo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mienone.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mienthree.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mientwo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,17 +156,44 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Cdcswitchclient" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Socketworker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="237">
+              <caret line="231" column="32" selection-start-line="231" selection-start-column="20" selection-end-line="231" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1223#1224#0" expanded="true" />
+                <element signature="e#1265#1266#0" expanded="true" />
+                <element signature="method#TalkTogether#0;class#ConnectPc#0;class#Socketworker#0" />
+                <element signature="method#FirstTalk#0;class#ConnectPc#0;class#Socketworker#0" />
+                <element signature="e#6387#6388#0" expanded="true" />
+                <element signature="e#6422#6423#0" expanded="true" />
+                <element signature="e#6986#6987#0" expanded="true" />
+                <element signature="e#7029#7030#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,9 +203,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="resourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Backtopageconnect</find>
+      <find>2</find>
+      <find>CallDisconnected</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -49,27 +224,49 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Fragment_viewsteoadapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_mientwo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_mienthree.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_mienone.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mientwo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienone.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Viewstepadapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienthree.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienone.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mientwo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_mientwo.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_mienone.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Viewstepadapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/ViewPagerNoSwipe.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Adapter/ViewPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/ZoomOutPageTransformer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Neter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/linear_interpolator.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_connect.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/rotateusb.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_choose.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Adapter/GridViewAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Tool/LoadGappsCurrent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/itemviewapp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialogpmsion.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Fragment/ConnectFra.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/mouseplayer.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/menucontrol.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Talkcode.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/TalkCode.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Talkcontent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Fragment/ChooseFra.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/GameService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/SocketworkerListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Socketworker.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="218" />
-    <option name="y" value="107" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="361" />
+    <option name="y" value="-28" />
     <option name="width" value="699" />
     <option name="height" value="744" />
   </component>
@@ -79,8 +276,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Cdcswitchclient" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -101,23 +307,48 @@
             </path>
             <path>
               <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="cdcswitchclient" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="localhost:62001" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="device.picker.selection" value="192.168.1.2:5555" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="F:/Metabolism.Project/Android.Server/Metabolism" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="com.bacunguyenandroid.cdcswitchclient" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bacunguyenandroid.cdcswitchclient.Adapter" />
+      <recent name="com.bacunguyenandroid.cdcswitchclient" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\CDCswitch\CDCswitch\Cdcswitchclient\app\src\main\res\drawable" />
+      <recent name="F:\CDCswitch\CDCswitch\Cdcswitchclient\app\src\main\res\anim" />
+      <recent name="F:\CDCswitch\CDCswitch\Cdcswitchclient\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,202 +438,457 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="218" y="107" width="699" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.4225352" />
-      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.29500756" />
+      <window_info id="Structure" order="2" sideWeight="0.5008183" side_tool="true" weight="0.20726173" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
-      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Resources Explorer" order="7" weight="0.3286385" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.12274959" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.29623568" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" />
+      <window_info anchor="bottom" id="Find" order="0" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.49924356" weight="0.049099836" />
+      <window_info anchor="bottom" id="TODO" order="3" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50075644" side_tool="true" weight="0.47463176" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49924356" weight="0.2405892" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49924356" weight="0.3846154" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.19440243" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.18381241" />
     </layout>
     <layout-to-restore>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.204236" />
-      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.20726173" />
+      <window_info id="Structure" order="2" sideWeight="0.5008183" side_tool="true" weight="0.20726173" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
-      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Resources Explorer" order="7" weight="0.3290469" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.12274959" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.29623568" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" />
+      <window_info anchor="bottom" id="Find" order="0" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Logcat" order="2" weight="0.12274959" />
+      <window_info anchor="bottom" id="TODO" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Build" order="6" weight="0.26350245" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info active="true" anchor="right" id="Preview" order="5" visible="true" weight="0.19440243" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.2881997" />
     </layout-to-restore>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="Neter.Datatranfer" />
+        <watch expression="appNamePackage" />
+        <watch expression="apackInfo.applicationInfo.flags " />
+        <watch expression="json" />
+        <watch expression="repondslove" />
+        <watch expression="talkcontent1" />
+        <watch expression="talkcode" />
+        <watch expression="Talkcontent" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="setValue">
+      <expression>
+        <expression-string>&quot;{\&quot;TalkCode\&quot;:\&quot;JUSTTALK\&quot;}&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&quot;{\&quot;talkcode\&quot;:\&quot;STARTEDGAME\&quot;}&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienthree.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienone.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mientwo.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mientwo.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Viewstepadapter.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mienone.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="e#468#755#0" />
+            <element signature="e#764#1561#0" />
+            <element signature="e#1832#1872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Neter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/titleform.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_usb_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/linear_interpolator.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="17">
+          <caret line="1" column="53" lean-forward="true" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mienone.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/appicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotateusb.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_connect.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="433">
+          <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mienthree.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_choose.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="493">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="40" />
+          <folding>
+            <element signature="e#438#1641#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mientwo.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Tool/ZoomOutPageTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Tool/LoadGappsCurrent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/scaleimage.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/view/animation/Animation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#0#6033#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#3321#3322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="2587" column="16" selection-start-line="2587" selection-start-column="16" selection-end-line="2587" selection-end-column="16" />
+          <folding>
+            <element signature="e#73604#73605#0" expanded="true" />
+            <element signature="e#73655#73656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ballonbackicon.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialogpmsion.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="51">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/java/lang/Runnable.class">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ballonlayout.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/xuathienballon.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/itemviewapp.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/scaleplank.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mientwo.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Adapter/GridViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding>
-            <element signature="e#1027#1162#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Viewstepadapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="492">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienthree.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Adapter/ViewPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/ViewPagerNoSwipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="14" column="61" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Fragment/ConnectFra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/buttonmenumouse.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/bienmatmenu.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/buttonmenushutdown.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#1033#1168#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-          </folding>
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienone.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ballonicon.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="54" column="149" selection-start-line="54" selection-start-column="149" selection-end-line="54" selection-end-column="149" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1060#1195#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1174#1305#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1284#1285#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/mouseplayerimage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mouseplayer.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="18" />
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/menuxuathien.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/c5b4c491aecb72e7c32a78da0b5c6b9cda8dee0f/gson-2.8.5-sources.jar!/com/google/gson/Gson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="812" selection-start-line="812" selection-end-line="812" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Talkcontent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menucontrol.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/TalkCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Fragment/ChooseFra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+          <folding>
+            <element signature="method#onViewCreated#0;class#ChooseFra#0" />
+            <element signature="class#LoadInstallPacket#0;class#ChooseFra#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/GameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#SetupPargramFist#0;class#GameService#0" />
+            <element signature="method#CreateBallonView#0;class#GameService#0" />
+            <element signature="method#AddBallon#0;class#GameService#0" />
+            <element signature="method#AddMenu#0;class#GameService#0" />
+            <element signature="method#RemoveMenu#0;class#GameService#0" />
+            <element signature="method#CreateMousePlayer#0;class#GameService#0" />
+            <element signature="method#clearAnimation#0;class#GameService#0" />
+            <element signature="method#onClick#0;class#GameService#0" />
+            <element signature="method#onTouch#0;class#GameService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/SocketworkerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="1462">
+          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initSetup#0;class#MainActivity#0" />
+            <element signature="method#Backtopageconnect#0;class#MainActivity#0" />
+            <element signature="method#Movetopagechoose#0;class#MainActivity#0" />
+            <element signature="method#onTabSelected#0;class#MainActivity#0" />
+            <element signature="method#RequestPermision#0;class#MainActivity#0" />
+            <element signature="method#onActivityResult#0;class#MainActivity#0" />
+            <element signature="method#DialogPermission#0;class#MainActivity#0" />
+            <element signature="method#onResume#0;class#MainActivity#0" />
+            <element signature="method#isServiceRunning#0;class#MainActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Socketworker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="231" column="32" selection-start-line="231" selection-start-column="20" selection-end-line="231" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="method#TalkTogether#0;class#ConnectPc#0;class#Socketworker#0" />
+            <element signature="method#FirstTalk#0;class#ConnectPc#0;class#Socketworker#0" />
+            <element signature="e#6387#6388#0" expanded="true" />
+            <element signature="e#6422#6423#0" expanded="true" />
+            <element signature="e#6986#6987#0" expanded="true" />
+            <element signature="e#7029#7030#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

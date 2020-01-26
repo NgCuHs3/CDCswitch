@@ -1,7 +1,9 @@
 ﻿using ADBTool;
 using CDCswitchserver.interfaceUI;
+using CDCswitchserver.net;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,24 +23,42 @@ namespace CDCswitchserver
     /// <summary>
     /// Interaction logic for Bootwindow.xaml
     /// </summary>
-    public partial class Bootwindow : Window
+    public partial class Bootwindow : Window,Mainchildremotecs
     {
         public Bootwindow()
         {
-            TADB = new ADBTask(@"C:\Users\fpc\AppData\Local\Android\sdk\platform-tools\adb.exe");
-            //Adb should creat fisrt
             InitializeComponent();
             //Center srceen 
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             //khoi dong server adb
-
             //mặc định là mở setion 1
+            
+        }
+        #region Input main
+        public void InputMain(Mainwindow mainwindow)
+        {
+            this.mainwindow = mainwindow;
+            this.TADB = mainwindow.TADB;
+            this.setupwindow = mainwindow.setupwindow;
+            this.socketworker = mainwindow.socketworker;
             NaviSetion1();
-            //cai disconnect event
+            //chuyển chới tab 1 tránh trường hợp nó bị null content và tab1 sẽ nghe ngóng device kết nối nếu được nó sẽ chuyển sang tab hai
+            SetupEvent();
+          
+        }
+        private void SetupEvent()
+        {
             TADB.OndeivceDisconect += TADB_OndeivceDisconect;
         }
+
+        #endregion
+
         #region Valueable
-        public ADBTask TADB;
+        private Mainwindow mainwindow;
+        private ADBTask TADB;
+        private Socketworker socketworker;
+        private setupwindow setupwindow;
+        
         #endregion
         /// <summary>
         /// Envent Off the app
@@ -107,8 +127,39 @@ namespace CDCswitchserver
         }
         private void TADB_OndeivceDisconect(object sender, Device device)
         {
-            NaviSetion1();
+            Dispatcher.Invoke(() =>
+            {
+                     //nếu nó đang nghe ở tab3 mà ở trạng thái chưa kết nối mà ta hủy kết nối thì phải ngưng trạng thái nghê
+                     socketworker.StopBegingConnect();
+               
+                    if (TADB.GetDeivce().IPAddress == device.IPAddress)
+                    {
+                        var lv = TADB.GetDevices();                       
+                        if (lv.Count >= 1)
+                        {
+                            TADB.SetDevice(lv[0]);
+                            NaviSetion2();
+                        }
+                        else
+                        {
+                            NaviSetion1();
+                        }
+                    }
+                    else if (((Pageindex)Frameshow.Content).getCurrentPageIndex() == 2)
+                    {
+                        var lv = TADB.GetDevices();
+                        if (lv.Count >= 1)
+                        {
+                            NaviSetion2();
+                        }
+                        else
+                        {
+                            NaviSetion1();
+                        }
+                    }
+            });
         }
+     
         #endregion
         /// <summary>
         /// Method to do thing
@@ -162,6 +213,10 @@ namespace CDCswitchserver
                         GotoPage("threetotwo", 2);
                         GotoPage("twotoone", 1);
                     }
+                    if(currentindex == index)
+                    {
+                        GotoPage(null, index);
+                    }
                 }
                 else
                 {
@@ -191,15 +246,17 @@ namespace CDCswitchserver
             }
             string Amin = KeyAmin == "USEDEFAULTAMIN" ? DefaultAmin : KeyAmin;
             if (Amin != null)
-            {
+            {              
                 Storyboard sb = this.FindResource(Amin) as Storyboard;
                 sb.Begin();
             }
             //navi
             Frameshow.Navigate(page);
             //
-            ((Pageindex)page).SetBootwindow(this);
+            ((Mainchildremotecs)page).InputMain(mainwindow);
         }
+
+   
         #endregion
 
     }

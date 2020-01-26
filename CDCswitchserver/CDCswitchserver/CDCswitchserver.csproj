@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
@@ -41,11 +44,21 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.6.0.325, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.6.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.2.0.0\lib\net452\Nancy.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -67,10 +80,24 @@
     <Compile Include="Bootwindow.xaml.cs">
       <DependentUpon>Bootwindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\Converter.cs" />
+    <Compile Include="interfaceUI\ControlShell.cs" />
+    <Compile Include="interfaceUI\ControlShellDataList.cs" />
+    <Compile Include="interfaceUI\FunctionkeyModel.cs" />
+    <Compile Include="interfaceUI\ListfunctionKey.cs" />
+    <Compile Include="interfaceUI\Mainchildremotecs.cs" />
     <Compile Include="interfaceUI\Pageindex.cs" />
+    <Compile Include="interfaceUI\Sourceuser.cs" />
     <Compile Include="Lockscreen.xaml.cs">
       <DependentUpon>Lockscreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mainwindow.xaml.cs">
+      <DependentUpon>Mainwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="minicap\DecodeMinicap.cs" />
+    <Compile Include="net\Neter.cs" />
+    <Compile Include="net\Socketworker.cs" />
+    <Compile Include="net\Talkcontent.cs" />
     <Compile Include="Setion1.xaml.cs">
       <DependentUpon>Setion1.xaml</DependentUpon>
     </Compile>
@@ -83,8 +110,10 @@
     <Compile Include="Setupwindow.xaml.cs">
       <DependentUpon>Setupwindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="switcher\Typecontrol.cs" />
+    <Compile Include="Tool\Adbminihelper.cs" />
     <Compile Include="Tool\ADBTool.cs" />
-    <Compile Include="Tool\Extensioncs.cs" />
+    <Compile Include="exhelper\Extensioncs.cs" />
     <Page Include="Bootwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,6 +123,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Lockscreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mainwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,10 +185,65 @@
     <Resource Include="image\appicon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\bgtest.jpg" />
+    <Resource Include="appicon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\pubgbg.png" />
+    <Resource Include="image\connected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\themeUIdesign.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagecontrol\switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagecontrol\add.png" />
+    <Resource Include="imagecontrol\aidkit.png" />
+    <Resource Include="imagecontrol\avatar.png" />
+    <Resource Include="imagecontrol\bag.png" />
+    <Resource Include="imagecontrol\bomb.png" />
+    <Resource Include="imagecontrol\boost.png" />
+    <Resource Include="imagecontrol\box.png" />
+    <Resource Include="imagecontrol\brake.png" />
+    <Resource Include="imagecontrol\bullet.png" />
+    <Resource Include="imagecontrol\cancel.png" />
+    <Resource Include="imagecontrol\changesit.png" />
+    <Resource Include="imagecontrol\cursor.png" />
+    <Resource Include="imagecontrol\door.png" />
+    <Resource Include="imagecontrol\down.png" />
+    <Resource Include="imagecontrol\downswim.png" />
+    <Resource Include="imagecontrol\driving.png" />
+    <Resource Include="imagecontrol\exit.png" />
+    <Resource Include="imagecontrol\eye.png" />
+    <Resource Include="imagecontrol\firstgun.png" />
+    <Resource Include="imagecontrol\fourvetor.png" />
+    <Resource Include="imagecontrol\getin.png" />
+    <Resource Include="imagecontrol\gunthird.png" />
+    <Resource Include="imagecontrol\hold.png" />
+    <Resource Include="imagecontrol\jump.png" />
+    <Resource Include="imagecontrol\kneel.png" />
+    <Resource Include="imagecontrol\left.png" />
+    <Resource Include="imagecontrol\lookout.png" />
+    <Resource Include="imagecontrol\mouseview.png" />
+    <Resource Include="imagecontrol\parachute.png" />
+    <Resource Include="imagecontrol\refresh.png" />
+    <Resource Include="imagecontrol\right.png" />
+    <Resource Include="imagecontrol\secondgun.png" />
+    <Resource Include="imagecontrol\select.png" />
+    <Resource Include="imagecontrol\settings.png" />
+    <Resource Include="imagecontrol\target.png" />
+    <Resource Include="imagecontrol\tiltleft.png" />
+    <Resource Include="imagecontrol\tiltright.png" />
+    <Resource Include="imagecontrol\up.png" />
+    <Resource Include="imagecontrol\upswim.png" />
+    <Resource Include="imagecontrol\zying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagecontrol\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagecontrol\catch.png" />
+    <Resource Include="imagecontrol\comment.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

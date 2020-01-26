@@ -20,7 +20,7 @@ namespace CDCswitchserver
     /// <summary>
     /// Interaction logic for Setion1.xaml
     /// </summary>
-    public partial class Setion1 : Page, Pageindex
+    public partial class Setion1 : Page, Pageindex,Mainchildremotecs
     {
         public Setion1()
         {
@@ -31,16 +31,19 @@ namespace CDCswitchserver
         {
             return 1;
         }
-        public void SetBootwindow(Bootwindow bootwindow)
+
+        public void InputMain(Mainwindow mainwindow)
         {
+            var bootwindow = mainwindow.bootwindow;
+
             bootwindow.ToRightButton.Visibility = Visibility.Hidden;
             bootwindow.ToLeftButton.Visibility = Visibility.Hidden;
 
-            var listdv = bootwindow.TADB.GetDevices();
+            var listdv = mainwindow.TADB.GetDevices();
             if (listdv.Count() >= 1)
             {
                 //select the working  device
-                bootwindow.TADB.SetDevice(listdv[0]);
+                mainwindow.TADB.SetDevice(listdv[0]);
 
                 bootwindow.NaviSetion2();
             }
@@ -49,11 +52,14 @@ namespace CDCswitchserver
                 DeviceChange deviceChange = null;
                 deviceChange = (e, s) =>
                 {
+                    mainwindow.TADB.SetDevice(s);
                     bootwindow.NaviSetion2();
-                    bootwindow.TADB.OndeivceConnect -= deviceChange;
+                    mainwindow.TADB.OndeivceConnect -= deviceChange;
                 };
-                bootwindow.TADB.OndeivceConnect += deviceChange;
+                mainwindow.TADB.OndeivceConnect += deviceChange;
             }
         }
+
+     
     }
 }

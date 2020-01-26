@@ -48,6 +48,8 @@
                     <TextBlock x:Name="Baterrydv" Margin="4">Baterry level</TextBlock>
                     <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
                     <TextBlock x:Name="Manufacturerdv"  Margin="4" >Manufacturer</TextBlock>
+                    <Border Height="0.5" Background="#536DFE" CornerRadius="1" Margin="4 0 4 0"></Border>
+                    <TextBlock x:Name="Serialdv"  Margin="4" >Serial</TextBlock>
                 </StackPanel>
               </Border>    
         </Grid>

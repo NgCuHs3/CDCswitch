@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:gravity="center"
+    android:id="@+id/menucontrol"
+    android:layout_height="wrap_content">
+       <android.support.v7.widget.CardView
+           android:layout_margin="2dp"
+           xmlns:card_view="http://schemas.android.com/apk/res-auto"
+           android:id="@+id/card_view_shutdown"
+           android:layout_gravity="center"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           app:cardElevation="5dp"
+           card_view:cardCornerRadius="25dp">
+           <Button
+               android:id="@+id/card_view_shutdown_button"
+               android:layout_margin="5dp"
+               android:background="@drawable/buttonmenushutdown"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" />
+       </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,1 @@
+package com.bacunguyenandroid.cdcswitchclient.Net;import java.net.Socket;public class Neter {    public static int MOUSEUSER_PORT = 8989;    public static int DATATRANFER_PORT = 7979;    public  static Socket Mouseuser;    public  static Socket Datatranfer;}

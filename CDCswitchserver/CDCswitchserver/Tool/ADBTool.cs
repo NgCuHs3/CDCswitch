@@ -33,7 +33,6 @@ namespace ADBTool
         //delegate is type of function
         public event DeviceChange OndeivceConnect;
         public event DeviceChange OndeivceDisconect;
-        public event DeviceChange OndeivceOfflineorUnauthorized;
         public static string ERR_code = "ERR";
         private CancellationTokenSource cancellationTokenSource; 
         /// <summary>
@@ -51,7 +50,7 @@ namespace ADBTool
         ~ADBTask()
         {
             cancellationTokenSource.Cancel();
-            this.KillServer();
+            //this.KillServer();
         }
         #endregion Contructor
 
@@ -61,29 +60,84 @@ namespace ADBTool
         #region Broadcast
         private Device FDevice;
         private void ListenDevice(CancellationToken  token)
-        {
+        {    
             new Thread(() =>
             {
+                //check device
+                List<Device>ProListDevice = null;
+
                 while (!token.IsCancellationRequested)
                 {
-                    String outcode = ExecuteGiveResultImmediately("devices");
-                    var ListDevice = RegexDataADB.MakeListDevices(outcode).ToList();
+                    var ListDevice = GetDevices();
                     if (ListDevice.Count() == 0)
                     {
                         ExcuteWaitingHaveChange("wait-for-device");
-                        outcode = ExecuteGiveResultImmediately("devices");
-                        var  FDevices = RegexDataADB.MakeListDevices(outcode).ToList();
-                        FDevice = FDevices.First();
-                        if (OndeivceConnect != null) OndeivceConnect(this, FDevice);
-                    }
+                        ListDevice = GetDevices();
+
+                        foreach (var item in ListDevice)
+                        {
+                            if (OndeivceConnect != null) OndeivceConnect(this, item);                            
+                            new Thread(() =>
+                            {
+                                //wait for disconnect
+                                var dv = ExcuteWaittingDisconnectDevice(item);
+                                if (OndeivceConnect != null) OndeivceDisconect(this, item);
+                            }).Start();
+                        }
+                        ProListDevice = GetDevices();
+                    }                
                     else if(ListDevice.Count() >= 1)
                     {
-                        ExcuteWaitingHaveChange("wait-for-disconnect");
-                        outcode = ExecuteGiveResultImmediately("devices");
-                        var  FDevices = RegexDataADB.MakeListDevices(outcode).ToList();
-                        if (OndeivceDisconect != null) OndeivceDisconect(this, FDevice);
-                    }
-                    
+                        if(ProListDevice == null)
+                        {
+                            foreach (var item in ListDevice)
+                            {
+                                if (OndeivceConnect != null) OndeivceConnect(this, item);
+                                new Thread(() => 
+                                {
+                                    //wait for disconnect
+                                    var dv = ExcuteWaittingDisconnectDevice(item);
+                                    if (OndeivceDisconect != null) OndeivceDisconect(this, dv);
+                                }).Start();
+                            }
+                            ProListDevice = GetDevices();
+                        }
+                        else
+                        {
+                            List<Device> olddv = new List<Device>();
+                            //find old item in list
+                            foreach (var itemi in ListDevice)
+                            {
+                                foreach (var itemj in ProListDevice)
+                                {
+                                    if(itemi.IPAddress == itemj.IPAddress)
+                                    {
+                                        olddv.Add(itemi);
+                                    }
+                                }
+                            }
+                      
+                            foreach (var item in olddv)
+                            {
+                                ListDevice.Remove(item);//Clear old item from list just have new item
+                            }
+
+                            foreach (var item in ListDevice)
+                            {
+                                if (OndeivceConnect != null) OndeivceConnect(this, item);
+                                new Thread(() => 
+                                {
+                                    //wait for new device disconnect
+                                    var dv = ExcuteWaittingDisconnectDevice(item);
+                                    if (OndeivceDisconect != null) OndeivceDisconect(this, dv);
+                                }
+                                ).Start();
+                            }
+
+                            //update old list device
+                            ProListDevice = GetDevices();
+                        }
+                    }          
                 }
             })
             { IsBackground = true }.Start();
@@ -176,6 +230,7 @@ namespace ADBTool
             return outcode;
         }
         // -->Dirpro/(arm64|x86|...)/FileName
+        
         public bool PushFileProcess(string DirPro, string FileName)
         {
             string PcFolder = DirPro + "\\" + GetChipType();
@@ -268,22 +323,21 @@ namespace ADBTool
             bool IsRemove = RemoveFile(File);
             return Iscap && Ispull && IsRemove;
         }
-
-         
+   
         //Device exflore just use on selected device
         public string GetNameDevice()
         {
             string cmd = "shell getprop ro.product.model";
             return ExcuteWithDeviceTargetImmediately(cmd).Trim();
         }
-        public string GetSerialDevice()
+        public string GetIPAddress()
         {
-            return FDevice != null ? FDevice.Serial : ERR_code;
+            return FDevice != null ? FDevice.IPAddress : ERR_code;
         }
 
         public DeviceState GetDeviceState()
         {
-            return FDevice != null ? FDevice.DeviceState : DeviceState.UNDEFINE;
+            return FDevice.DeviceState;
         }
         public bool IsDeviceNull()
         {
@@ -297,11 +351,26 @@ namespace ADBTool
             return delspace;
         }
 
+        public string GetSerial()
+        {
+            string cmd = "shell getprop ro.serialno";
+            string abicpu = ExcuteWithDeviceTargetImmediately(cmd);
+            var delspace = String.Join("", abicpu.Where(c => !char.IsWhiteSpace(c)));
+            return delspace;
+        }
+
         public SizeScreen GetSizeScreen()
         {
             string cmd = "shell wm size";
             string outcode = ExcuteWithDeviceTargetImmediately(cmd);
-            return RegexDataADB.MakeSizeDevice(outcode);
+            try
+            {
+              return  RegexDataADB.MakeSizeDevice(outcode);
+            }
+            catch (Exception)
+            {
+                return new SizeScreen() { Height = 0,Width = 0 };
+            }
         }
 
         public string GetApiLevelDevice() {
@@ -327,7 +396,7 @@ namespace ADBTool
         public bool CheckPortExsit(int Port)
         {        
             //get list port
-            var listport = GetListTcpPort();
+            var listport = GetListForwardTcpPort();
             //check exsit por
             var Okport = listport.Where(p => p.ClientPort == Port.ToString());
             if (Okport.Count() >= 1) return true;
@@ -351,11 +420,7 @@ namespace ADBTool
             if (Okport.Count() >= 1) return true;
             return false;
         }
-        public IEnumerable<ForwardTcp> GetListTcpPort()
-        {
-            string outcode = ExecuteGiveResultImmediately("forward --list");
-            return RegexDataADB.MadeListTcp(outcode);
-        }
+       
         public List<Device> GetDevices()
         {
             String outcode = ExecuteGiveResultImmediately("devices");
@@ -375,6 +440,19 @@ namespace ADBTool
             string outcode = ExecuteGiveResultImmediately("forward --list");
             return RegexDataADB.MadeListforwardAbstracts(outcode);
         }
+
+        public IEnumerable<ReverseTcp> GetListReverseTcpPort()
+        {
+            string outcode = ExcuteWithDeviceTargetImmediately("reverse --list");
+            return RegexDataADB.MakeListreverseTcp(outcode);
+        }
+
+        public IEnumerable<ForwardTcp> GetListForwardTcpPort()
+        {
+            string outcode = ExecuteGiveResultImmediately("forward --list");
+            return RegexDataADB.MadeListforwardTcp(outcode);
+        }
+
         public void RemoveAllTcpPort()
         {
             ExecuteGiveResultImmediately("forward --remove-all");
@@ -393,6 +471,10 @@ namespace ADBTool
         {         
             ExcuteWithDeviceTargetImmediately("forward tcp:" + Fp + " tcp:" + Sp);          
         }
+        public void CreateReverseTcp(int Fp,int Sp)
+        {
+            ExcuteWithDeviceTargetImmediately("reverse tcp:" + Fp + " tcp:" + Sp);
+        }
         #endregion Function
 
         /// <summary>
@@ -402,13 +484,11 @@ namespace ADBTool
         private  string Filename;
         public  static string LibsProcessPath;
         public string ExcuteWithDeviceTargetImmediately(string Command)
-        {
-            if (FDevice == null)
-                return ERR_code;
+        {           
             Process process = new Process();
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.FileName = Filename;
-            process.StartInfo.Arguments = " -s " + FDevice.Serial + " " + Command;
+             process.StartInfo.Arguments = " -s " + FDevice.IPAddress + " " + Command;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.RedirectStandardError = true;
@@ -442,21 +522,20 @@ namespace ADBTool
             process.WaitForExit();
             return process.ExitTime - process.StartTime;
         }
-
-        private TimeSpan ExcuteWaittingDisconnectDevice(string Command,Device device)
+        private Device ExcuteWaittingDisconnectDevice(Device device)
         {
             Process process = new Process();
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.FileName = Filename;
-            process.StartInfo.Arguments = " -s"+ device.Serial+ " " + Command;
+            process.StartInfo.Arguments = " -s "+ device.IPAddress+ " wait-for-disconnect";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.RedirectStandardError = true;
             process.Start();
             process.WaitForExit();
-            return process.ExitTime - process.StartTime;
+            return device;
         }
-        private void ExcuteToRunApplication(string Command)
+        public void ExcuteToRunApplication(string Command)
         {
             try
             {
@@ -464,7 +543,7 @@ namespace ADBTool
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 process.StartInfo.FileName = "cmd.exe";
                 process.StartInfo.CreateNoWindow = true;
-                process.StartInfo.Arguments = "/C \"" + Filename + " -s " + FDevice.Serial + " " + Command + "\"";
+                process.StartInfo.Arguments = "/C \"" + Filename + " -s " + FDevice.IPAddress + " " + Command + "\"";
                 process.StartInfo.UseShellExecute = true;
                 process.Start();
             }
@@ -486,7 +565,7 @@ namespace ADBTool
     #region Type Class
     public class Device
     {
-        public string Serial { get; set; }
+        public string IPAddress { get; set; }
         public DeviceState DeviceState { get; set; }
     }
 
@@ -500,8 +579,7 @@ namespace ADBTool
         OFFLINE,
         DEVICE,
         UNAUTHORIZED,
-        BOOTLOADER,
-        UNDEFINE
+        BOOTLOADER
     }
     public class ForwardAbstract
     {
@@ -519,16 +597,24 @@ namespace ADBTool
         }
         public ForwardAbstract() { }
     }
-    public class ForwardTcp
+    public class ForwardTcp : FRTcp
     {
-        string serialDevice;
-        string serverPort;
-        string clientPort;
+        
+    }   
+    public class ReverseTcp : FRTcp
+    {
+
+    }
+    public class FRTcp
+    {
+        protected string serialDevice;
+        protected string serverPort;
+        protected string clientPort;
         public string SerialDevice { get => serialDevice; set => serialDevice = value; }
         public string ServerPort { get => serverPort; set => serverPort = value; }
         public string ClientPort { get => clientPort; set => clientPort = value; }
-        public ForwardTcp() { }
-        public ForwardTcp(string SerialDevice, string ServerPort, string ClientPort)
+        public FRTcp() { }
+        public FRTcp(string SerialDevice, string ServerPort, string ClientPort)
         {
             this.SerialDevice = SerialDevice;
             this.ServerPort = ServerPort;
@@ -549,7 +635,7 @@ namespace ADBTool
                 yield return forwardAbstract;
             }
         }
-        static public IEnumerable<ForwardTcp> MadeListTcp(string OutCode)
+        static public IEnumerable<ForwardTcp> MadeListforwardTcp(string OutCode)
         {         
             Regex re = new Regex(@"(?<serial>\S+) tcp:(?<serverport>\d+) tcp:(?<clientport>\d+)");
             foreach (Match item in re.Matches(OutCode))
@@ -561,14 +647,27 @@ namespace ADBTool
                 yield return forwardTcp;
             }
         }
+
+        static public IEnumerable<ReverseTcp> MakeListreverseTcp(string OutCode)
+        {
+            Regex re = new Regex(@"(?<serial>\S+) tcp:(?<serverport>\d+) tcp:(?<clientport>\d+)");
+            foreach (Match item in re.Matches(OutCode))
+            {
+                ReverseTcp reverseTcp = new ReverseTcp();
+                reverseTcp.SerialDevice = item.Groups["serial"].ToString();
+                reverseTcp.ServerPort = item.Groups["serverport"].ToString();
+                reverseTcp.ClientPort = item.Groups["clientport"].ToString();
+                yield return reverseTcp;
+            }
+        }
         static public IEnumerable<Device> MakeListDevices(string OutCode)
         {
             //\t it mean tab char
-            Regex re = new Regex(@"(?<serial>\S+)\t(?<state>device|offline|bootloader)");
+            Regex re = new Regex(@"(?<ipaddress>\S+)\t(?<state>device|offline|bootloader)");
             foreach (Match item in re.Matches(OutCode))
             {
                 Device device = new Device();
-                device.Serial = item.Groups["serial"].ToString();
+                device.IPAddress = item.Groups["ipaddress"].ToString();
                 //parse
                 DeviceState state;
                 string status = item.Groups["state"].ToString().ToUpper();                

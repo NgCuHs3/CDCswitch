@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/pubgbg.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagecontrol/catch.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagecontrol/comment.png")]
 
 

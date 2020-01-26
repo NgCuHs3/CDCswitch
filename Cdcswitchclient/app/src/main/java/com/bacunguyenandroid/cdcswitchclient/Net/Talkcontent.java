@@ -1,0 +1,1 @@
+package com.bacunguyenandroid.cdcswitchclient.Net;public class Talkcontent {    public TalkCode TalkCode;}

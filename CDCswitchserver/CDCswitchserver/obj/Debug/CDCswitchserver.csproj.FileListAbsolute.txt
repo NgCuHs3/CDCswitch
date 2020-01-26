@@ -32,3 +32,12 @@ F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\obj\Debug\Bootwindow.g.cs
 F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\obj\Debug\Bootwindow.baml
 F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\obj\Debug\Lockscreen.g.cs
 F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\obj\Debug\Lockscreen.baml
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\bin\Debug\Microsoft.WindowsAPICodePack.dll
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\bin\Debug\Microsoft.WindowsAPICodePack.xml
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\obj\Debug\Mainwindow.g.cs
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\obj\Debug\Mainwindow.baml
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\bin\Debug\Nancy.dll
+F:\CDCswitch\CDCswitch\CDCswitchserver\CDCswitchserver\bin\Debug\Nancy.xml

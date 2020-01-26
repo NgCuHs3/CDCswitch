@@ -13,11 +13,11 @@
             <RowDefinition Height="8*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock  Grid.Row="1" FontSize="15" HorizontalAlignment="Center">
+        <TextBlock x:Name="statustex"  Grid.Row="1" FontSize="15" HorizontalAlignment="Center">
              Start cdcswitch client now 
         </TextBlock>
         <Grid Grid.Row="0">
-            <Image Source="image/appicon.png" Margin="20"></Image>
+            <Image x:Name="statuspic" Source="image/appicon.png" Margin="20"></Image>
         </Grid>
     </Grid>
 </Page>

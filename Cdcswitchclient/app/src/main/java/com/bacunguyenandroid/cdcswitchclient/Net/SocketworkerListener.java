@@ -1,0 +1,1 @@
+package com.bacunguyenandroid.cdcswitchclient.Net;public interface SocketworkerListener {    void OnTalkStart();    void OnTalkStop();    void OnDataTake(Talkcontent talkcontent);}

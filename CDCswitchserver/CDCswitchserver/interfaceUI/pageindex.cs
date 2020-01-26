@@ -8,7 +8,6 @@ namespace CDCswitchserver.interfaceUI
 {
     public interface Pageindex
     {
-        int getCurrentPageIndex();
-        void SetBootwindow(Bootwindow bootwindow);
+        int getCurrentPageIndex(); 
     }
 }
