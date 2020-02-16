@@ -20,7 +20,7 @@ namespace CDCswitchserver
     /// <summary>
     /// Interaction logic for Setion3.xaml
     /// </summary>
-    public partial class Setion3 : Page, Pageindex,Mainchildremotecs
+    public partial class Setion3 : Page, Pageindex,Mainchildremote
     {
         ~Setion3()
         {

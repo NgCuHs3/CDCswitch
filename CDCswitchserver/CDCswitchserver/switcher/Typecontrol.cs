@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace CDCswitchserver.switcher
 {
-    public class Typecontrol
-    {
         public enum TypeControl
         {
             JOY_STICK = 1,
@@ -50,6 +48,5 @@ namespace CDCswitchserver.switcher
             VEHICLEDOWN = 38,
             SWIMUP = 39,
             SWIMDOWN = 40
-        }
-    }
+       }
 }

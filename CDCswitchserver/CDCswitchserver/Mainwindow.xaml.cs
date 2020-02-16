@@ -33,6 +33,7 @@ namespace CDCswitchserver
         public Socketworker socketworker;
         public setupwindow setupwindow;
         public Bootwindow bootwindow;
+        public Lockscreen lockscreen;
         #endregion
 
         #region Event
@@ -43,15 +44,13 @@ namespace CDCswitchserver
             TADB = new ADBTask(@"C:\Users\fpc\AppData\Local\Android\sdk\platform-tools\adb.exe");
             //socket worket
             socketworker = new Socketworker();
-            //setupwindow
-            setupwindow = new setupwindow();
-            //boot window
-            bootwindow = new Bootwindow();
-
+         
             Runbootwindow();
         }
         private void Runbootwindow()
         {
+            //boot window
+            bootwindow = new Bootwindow();
             bootwindow.InputMain(this);
             bootwindow.Show();
             //ân của sổ chính

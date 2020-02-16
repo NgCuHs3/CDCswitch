@@ -11,12 +11,14 @@ namespace CDCswitchserver.interfaceUI
         public static List<FunctionkeyModel> GetListFunc()
         {
             List<FunctionkeyModel> FunctionkeyModels = new List<FunctionkeyModel>();
+
             FunctionkeyModels.Add(new FunctionkeyModel()
             {
                 Key = "R",
                 Name = "Reload",
                 Description = "Reload bullet"
             });
+            
             FunctionkeyModels.Add(new FunctionkeyModel()
             {
                 Key = "W",
@@ -41,6 +43,7 @@ namespace CDCswitchserver.interfaceUI
                 Name = "Right",
                 Description = "Move right"
             });
+            
             FunctionkeyModels.Add(new FunctionkeyModel()
             {
                 Key = "Q",

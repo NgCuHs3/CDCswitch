@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CDCswitchserver.interfaceUI
 {
-    interface Mainchildremotecs
+    interface Mainchildremote
     {
         void InputMain(Mainwindow mainwindow);
     }

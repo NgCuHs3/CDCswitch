@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagecontrol/catch.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagecontrol/comment.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("document/controlandkey.txt")]
 
 

@@ -2,6 +2,7 @@
 using CDCswitchserver.interfaceUI;
 using CDCswitchserver.minicap;
 using CDCswitchserver.net;
+using CDCswitchserver.switcher;
 using CDCswitchserver.Tool;
 using Microsoft.Win32;
 using System;
@@ -22,14 +23,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
-using static CDCswitchserver.switcher.Typecontrol;
+
 
 namespace CDCswitchserver
 {
     /// <summary>
     /// Interaction logic for setupwindow.xaml
     /// </summary>
-    public partial class setupwindow : Window,Mainchildremotecs
+    public partial class setupwindow : Window,Mainchildremote
     {
         public setupwindow()
         {
@@ -53,8 +54,8 @@ namespace CDCswitchserver
         private string FileSourceuser = "sourceuser.xml";
         private string Filesourceorigin = "sourceorigin.xml";
         public static ControlShellDataList listorigin;
-        private ControlShellDataList listuser;
-        private Sourceuser sourceuser;
+        public ControlShellDataList listuser;
+        public Sourceuser sourceuser;
         private Sourceuser sourceorigin;
         private Thread NotifyThread;
         private DecodeMinicap decodeMinicap;
@@ -72,7 +73,9 @@ namespace CDCswitchserver
         }
         private void SetCardMirrorHeight()
         {
-           
+            var sizescree = dBTask.GetSizeScreen();
+            double heightcard = sizescree.Width * ((double)ControlsCard.Width / (double)sizescree.Height);
+            ControlsCard.Height = heightcard;
         }
 
         private void SetupMirror()
@@ -96,7 +99,6 @@ namespace CDCswitchserver
 
         private void SetUpAdbEvent()
         {
-            dBTask.OndeivceDisconect += DBTask_OndeivceDisconect;
             socketworker.Ontalkstop += Socketworker_Ontalkstop;
         }
 
@@ -106,6 +108,7 @@ namespace CDCswitchserver
             this.mainwindow = mainwindow;
             this.dBTask = mainwindow.TADB;
             this.socketworker = mainwindow.socketworker;
+            SetCardMirrorHeight();
             SetupMirror();
             SetUpAdbEvent();
         }
@@ -120,13 +123,6 @@ namespace CDCswitchserver
             }
         }
 
-        private void DBTask_OndeivceDisconect(object sender, Device device)
-        {
-            if (this.Visibility == Visibility.Visible)
-            {
-                Environment.Exit(0);
-            }
-        }
 
 
         private void DecodeMinicap_FrameBodyFPS(BitmapImage framebody)
@@ -281,6 +277,9 @@ namespace CDCswitchserver
         {
             var bt = sender as Button;
             bt.Width = bt.Height;
+            bt.Margin = new Thickness(bt.Margin.Left + bt.Width > ControlsCard.Width ? ControlsCard.Width - bt.Width : bt.Margin.Left ,
+                                      bt.Margin.Top + bt.Height > ControlsCard.Height ? ControlsCard.Height - bt.Height : bt.Margin.Top,
+                                      0,0);
         }
 
         private void Upsize_Click(object sender, RoutedEventArgs e)
@@ -324,7 +323,18 @@ namespace CDCswitchserver
 
         private void StartGame_Button_Click(object sender, RoutedEventArgs e)
         {
-            SetupMirror();
+            //close stream
+            decodeMinicap.Dispose();
+            socketworker.StopConnectminicap();
+            //save control param
+            WriteSourceusertofile();
+            Notify("Saved");
+            //
+            mainwindow.lockscreen = new Lockscreen();
+            mainwindow.lockscreen.Show();
+            mainwindow.lockscreen.InputMain(mainwindow);
+            this.Hide();
+          
         }
 
         private void Saveuser_Click(object sender, RoutedEventArgs e)
@@ -419,163 +429,163 @@ namespace CDCswitchserver
                             TypeControl type = (TypeControl)Enum.Parse(typeof(TypeControl), itemf.Uid, true);
                             switch (type)
                             {
-                                case TypeControl.JOY_STICK:
+                                case TypeControl.JOY_STICK: //1
                                     Fk = "W-S";
                                     Bk = "A-D";
                                     break;
-                                case TypeControl.MOUSE_VIEW:
+                                case TypeControl.MOUSE_VIEW: //2
                                     Fk = "Mou";
                                     Bk = "Mou";
                                     break;
-                                case TypeControl.FIRE_BUTTON_R:
+                                case TypeControl.FIRE_BUTTON_R: //3
                                     Fk = "Left";
                                     Bk = "Clik";
                                     break;
-                                case TypeControl.TPPORFPP:
+                                case TypeControl.TPPORFPP: //4
                                     Fk = "M";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.LAY_BUTTON:
+                                case TypeControl.LAY_BUTTON: //5
                                     Fk = "X";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.SIT_BUTTON:
+                                case TypeControl.SIT_BUTTON: //6
                                     Fk = "C";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.SCOPE_ON_OF:
+                                case TypeControl.SCOPE_ON_OF: //7
                                     Fk = "Right";
                                     Bk = "Clik";
                                     break;
-                                case TypeControl.LOAD_BULLET:
+                                case TypeControl.LOAD_BULLET: //8
                                     Fk = "R";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.JUMP_BUTTON:
+                                case TypeControl.JUMP_BUTTON: //9
                                     Fk = "Spa";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.TILT_LEFT_BUTTON:
+                                case TypeControl.TILT_LEFT_BUTTON: //10
                                     Fk = "Q";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.TILT_RIGHT_BUTTON:
+                                case TypeControl.TILT_RIGHT_BUTTON: //11
                                     Fk = "E";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.GUN_THIRD:
+                                case TypeControl.GUN_THIRD: //12
                                     Fk = "3";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.VEHICLECHANGESIT:
+                                case TypeControl.VEHICLECHANGESIT: //13
                                     Fk = "0";
                                     Bk = "Num";
                                     break;
-                                case TypeControl.EXIT_VEHICLE:
+                                case TypeControl.EXIT_VEHICLE: //14
                                     Fk = "F";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.DRIVE_VEHICLE:
+                                case TypeControl.DRIVE_VEHICLE: //15
                                     Fk = "F";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.GET_IN_VEHICLE:
+                                case TypeControl.GET_IN_VEHICLE: //16
                                     Fk = "G";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.OPEN_CLOSE_DOOR:
+                                case TypeControl.OPEN_CLOSE_DOOR: //17
                                     Fk = "G";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.CANCEL_BOM:
+                                case TypeControl.CANCEL_BOM: //18
                                     Fk = "T";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.REVICE:
+                                case TypeControl.REVICE: //19
                                     Fk = "Z";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.GUN_FIRST:
+                                case TypeControl.GUN_FIRST: //20
                                     Fk = "1";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.GUN_SECOND:
+                                case TypeControl.GUN_SECOND: //21
                                     Fk = "2";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.BOMB:
+                                case TypeControl.BOMB: //22
                                     Fk = "B";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.ADD_BLOOD:
+                                case TypeControl.ADD_BLOOD: //23
                                     Fk = "4";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.OPEN_MAP:
+                                case TypeControl.OPEN_MAP: //24
                                     Fk = "M";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.OPEN_BAG:
+                                case TypeControl.OPEN_BAG: //25
                                     Fk = "Tab";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.SETTING:
+                                case TypeControl.SETTING: //26
                                     Fk = "Esc";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.TAKE:
+                                case TypeControl.TAKE: //27
                                     Fk = "J";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.MOUSE_EYE:
+                                case TypeControl.MOUSE_EYE: //28
                                     Fk = "Mid";
                                     Bk = "Clik";
                                     break;
-                                case TypeControl.QUICKCHAT:
+                                case TypeControl.QUICKCHAT: //29
                                     Fk = "4-6";
                                     Bk = "8-5";
                                     break;
-                                case TypeControl.HOLD_BOX:
+                                case TypeControl.HOLD_BOX: //30
                                     Fk = "T";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.VEHICLEBOOSTER:
+                                case TypeControl.VEHICLEBOOSTER: //31
                                     Fk = "Up";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.VEHICLEBRAKE:
+                                case TypeControl.VEHICLEBRAKE: //32
                                     Fk = "Down";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.VEHICLERIGHT:
+                                case TypeControl.VEHICLERIGHT: //33
                                     Fk = "Right";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.VEHICLELEFT:
+                                case TypeControl.VEHICLELEFT: //34
                                     Fk = "Left";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.VEHICLELOOKOUT:
+                                case TypeControl.VEHICLELOOKOUT: //35
                                     Fk = "Ctrl";
                                     Bk = "Right";
                                     break;
-                                case TypeControl.PARACHUTE:
+                                case TypeControl.PARACHUTE: //36
                                     Fk = "L";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.VEHICLEUP:
+                                case TypeControl.VEHICLEUP: //37
                                     Fk = "Del";
                                     Bk = "key";
                                     break;
-                                case TypeControl.VEHICLEDOWN:
+                                case TypeControl.VEHICLEDOWN: //38
                                     Fk = "Ent";
                                     Bk = "key";
                                     break;
-                                case TypeControl.SWIMUP:
+                                case TypeControl.SWIMUP: //39
                                     Fk = "U";
                                     Bk = "Key";
                                     break;
-                                case TypeControl.SWIMDOWN:
+                                case TypeControl.SWIMDOWN: //40
                                     Fk = "J";
                                     Bk = "Key";
                                     break;

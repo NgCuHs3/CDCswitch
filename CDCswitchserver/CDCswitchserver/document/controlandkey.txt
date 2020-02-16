@@ -1,0 +1,44 @@
+﻿Đây là quy ước giữa control type và key tương ứng của chúng khi viết nhận sự kiện key event và mouse event
+thì phải tuân theo quy ước này
+Một control được định nghĩa rằng phải có tọa độ và thực hiện chạm lên màng hình
+JOY_STICK = 1 , key : W_S-A-D
+MOUSE_VIEW = 2 ,key : Mouse
+FIRE_BUTTON_R = 3 , key : Left click
+TPPORFPP = 4, key : M
+LAY_BUTTON = 5 , key : X
+SIT_BUTTON = 6 , key : C
+SCOPE_ON_OF = 7 , key : Right click
+LOAD_BULLET = 8 , key : R
+JUMP_BUTTON = 9 , key : Space
+TILT_LEFT_BUTTON = 10 , key : Q
+TILT_RIGHT_BUTTON = 11 , key : E
+GUN_THIRD = 12 , key : 3
+VEHICLECHANGESIT = 13 , key : Numpad 0
+EXIT_VEHICLE = 14 , key : F
+DRIVE_VEHICLE = 15 , key : F
+GET_IN_VEHICLE = 16 , key : G
+OPEN_CLOSE_DOOR = 17 , key : G
+CANCEL_BOM = 18 , key : T
+REVICE = 19 , key : Z
+GUN_FIRST = 20 , key : 1
+GUN_SECOND = 21 , key : 2
+BOMB = 22 , key : B
+ADD_BLOOD = 23 , key : 4
+OPEN_MAP = 24 , key : M
+OPEN_BAG = 25 , key : Tab
+SETTING = 26 , key : Esc
+TAKE = 27 , key : J
+MOUSE_EYE = 28 , key : Middle click
+QUICKCHAT = 29 , key : Numpad 4_6-8_5
+HOLD_BOX = 30 , key : T
+VEHICLEBOOSTER = 31 , key : Arrow up
+VEHICLEBRAKE = 32 , key : Arrow down
+VEHICLERIGHT = 33 , key : Arrow right
+VEHICLELEFT = 34 , key : Arrow left 
+VEHICLELOOKOUT = 35 , key : Ctrl right
+PARACHUTE = 36 , key : L
+VEHICLEUP = 37 , key : Delete
+VEHICLEDOWN = 38 , key : Enter
+SWIMUP = 39 , key : U
+SWIMDOWN = 40 , key : J
+

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CDCswitchserver"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:kcmd="clr-namespace:CDCswitchserver.Keycommand"
         mc:Ignorable="d"
         WindowStyle="None"
         WindowState="Maximized"
@@ -13,6 +14,12 @@
         Width="1366"
         Height="680"
         Title="Lockscreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="kcmd:Keycommand.QuitCmd" Executed="QuitCmd_Executed"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Ctrl+Shift" Key="C"   Command="kcmd:Keycommand.QuitCmd" />
+    </Window.InputBindings>
     <Window.Resources>
         <SolidColorBrush
     x:Key="Visiablecolor">
@@ -36,11 +43,11 @@
         </SolidColorBrush>
     </Window.Resources>
     <Grid Background="{StaticResource Visiablecolor}">
-        <Grid x:Name="WorkingWall">
+        <Grid x:Name="WorkingWall" Visibility="Visible">
             <materialDesign:Card
              materialDesign:ShadowAssist.ShadowDepth="Depth2"
                       Background="White" VerticalAlignment="Center" HorizontalAlignment="Center"  >
-                <Image Width="760"  Source="image/pubgbg.png"/>
+                <Image Width="760"  Source="image/themeUIdesign.jpg"/>
             </materialDesign:Card>
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="10" x:Name="Gridtoolbar">
                 <materialDesign:Card
@@ -53,35 +60,35 @@
                                  UniformCornerRadius="6">
                     <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Grid Height="140" Width="250" HorizontalAlignment="Left">
-                            <Button ToolTip="Move forward" Height="40" Width="60" Margin="20" Background="#2196f3" BorderBrush="#2196f3"
+                            <Button x:Name="W_key" ToolTip="Move forward" Height="40" Width="60" Margin="20" Background="#2196f3" BorderBrush="#2196f3"
                          VerticalAlignment="Top"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
                                 W
                             </Button>
-                            <Button ToolTip="Move backward" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
+                            <Button x:Name="S_key" ToolTip="Move backward" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
                                 S
                             </Button>
-                            <Button  ToolTip="Move left" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
+                            <Button x:Name="A_key" ToolTip="Move left" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
                                                            HorizontalAlignment="Left"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
                                 A
                             </Button>
-                            <Button ToolTip="Move right" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
+                            <Button x:Name="D_key" ToolTip="Move right" Height="40" Width="60" Margin="20" VerticalAlignment="Bottom" Background="#2196f3" BorderBrush="#2196f3"
                                                            HorizontalAlignment="Right"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"  >
                                 D
                             </Button>
                         </Grid>
-                        <Button ToolTip="Tilt left" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">Q</Button>
-                        <Button ToolTip="Tilt right" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">E</Button>
-                        <Button ToolTip="revice help" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">Z</Button>
-                        <Button ToolTip="lay" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">X</Button>
-                        <Button ToolTip="Sit" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">C</Button>
+                        <Button x:Name="Q_key" ToolTip="Tilt left" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">Q</Button>
+                        <Button x:Name="E_key" ToolTip="Tilt right" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">E</Button>
+                        <Button x:Name="Z_key" ToolTip="revice help" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">Z</Button>
+                        <Button x:Name="X_key" ToolTip="lay" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">X</Button>
+                        <Button x:Name="C_key" ToolTip="Sit" Margin="10" Background="#2196f3" BorderBrush="#2196f3" Width="200">C</Button>
                         <Grid Margin="5" Height="60" Width="210">
-                            <Button Width="65" HorizontalAlignment="Left" Background="#FF5722" BorderBrush="#FF5722" Height="40" >CTRL</Button>
-                            <Button  Height="40" Width="70" Background="#FF5722" BorderBrush="#FF5722">SHIFT</Button>
-                            <Button Width="60" HorizontalAlignment="Right" Height="40" Background="#FF5722" BorderBrush="#FF5722">C</Button>
+                            <Button x:Name="Ctrl_O_key" Width="65" HorizontalAlignment="Left" Background="#FF5722" BorderBrush="#FF5722" Height="40" >CTRL</Button>
+                            <Button x:Name="Shift_O_key"  Height="40" Width="70" Background="#FF5722" BorderBrush="#FF5722">SHIFT</Button>
+                            <Button x:Name="C_O_key" Width="60" HorizontalAlignment="Right" Height="40" Background="#FF5722" BorderBrush="#FF5722">C</Button>
                         </Grid>
                         <materialDesign:Card
    Background="#2196f3" BorderBrush="#2196f3" Foreground="White"
@@ -107,18 +114,62 @@ What on the mirror screen and enjoy
                     </StackPanel>
                 </materialDesign:Card>
             </Grid>
+            
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-                <Button Background="#FFB300" BorderBrush="#FFB300"
+                <Button Background="#76ff03" BorderBrush="#76ff03" ToolTip="Take snapshoot"
+    Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+    materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="50" Width="50" Margin="10" Foreground="White" >
+                    <materialDesign:PackIcon Kind="ImageFilterCenterFocus" />
+                </Button>
+                <Button Background="#6200ea" BorderBrush="#6200ea" ToolTip="Mirror on off"
+    Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+    materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="50" Width="50" Margin="10" Foreground="White" >
+                    <materialDesign:PackIcon Kind="Camera" />
+                </Button>
+                <Button Background="#FFB300" BorderBrush="#FFB300" ToolTip="Mouse lock"
     Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
     materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="50" Width="50" Margin="10" Foreground="White" >
                     <materialDesign:PackIcon Kind="LockOutline" />
                 </Button>
-                  <Button Background="#D50000" BorderBrush="#D50000"
+                  <Button Background="#D50000" BorderBrush="#D50000" ToolTip="Exit"
     Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
     materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="50" Width="50" Margin="10" Foreground="White" >
                     <materialDesign:PackIcon Kind="ExitToApp" />
                 </Button>
+              
             </StackPanel>
+            <Image x:Name="Mirrorscreen" Source="image/themeUIdesign.jpg"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="760" Height="427.5" />
+        </Grid>
+        <Grid x:Name="WaitingWall" Visibility="Visible">
+            <ProgressBar x:Name="wprogress" Height="100" Width="100" BorderThickness="120" Foreground="#2196F3"
+  Style="{StaticResource MaterialDesignCircularProgressBar}"
+  Value="0"
+  IsIndeterminate="True" />
+            <TextBlock HorizontalAlignment="Center"  Foreground="#2196F3" VerticalAlignment="Bottom" Margin="0 0 0 80" FontSize="20" >
+                <TextBlock.Text>
+                    Preparing to start ...
+                </TextBlock.Text>
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Style.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter" >
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.500" Storyboard.TargetProperty="FontSize" To="40" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave" >
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.500" Storyboard.TargetProperty="FontSize" To="20" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
         </Grid>
     </Grid>
 </Window>

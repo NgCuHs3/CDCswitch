@@ -23,7 +23,7 @@ namespace CDCswitchserver
     /// <summary>
     /// Interaction logic for Bootwindow.xaml
     /// </summary>
-    public partial class Bootwindow : Window,Mainchildremotecs
+    public partial class Bootwindow : Window,Mainchildremote
     {
         public Bootwindow()
         {
@@ -145,7 +145,7 @@ namespace CDCswitchserver
                             NaviSetion1();
                         }
                     }
-                    else if (((Pageindex)Frameshow.Content).getCurrentPageIndex() == 2)
+                    else
                     {
                         var lv = TADB.GetDevices();
                         if (lv.Count >= 1)
@@ -253,7 +253,7 @@ namespace CDCswitchserver
             //navi
             Frameshow.Navigate(page);
             //
-            ((Mainchildremotecs)page).InputMain(mainwindow);
+            ((Mainchildremote)page).InputMain(mainwindow);
         }
 
    

@@ -80,14 +80,16 @@
     <Compile Include="Bootwindow.xaml.cs">
       <DependentUpon>Bootwindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converter\Converter.cs" />
+    <Compile Include="converter\Converter.cs" />
     <Compile Include="interfaceUI\ControlShell.cs" />
     <Compile Include="interfaceUI\ControlShellDataList.cs" />
     <Compile Include="interfaceUI\FunctionkeyModel.cs" />
     <Compile Include="interfaceUI\ListfunctionKey.cs" />
-    <Compile Include="interfaceUI\Mainchildremotecs.cs" />
+    <Compile Include="interfaceUI\Mainchildremote.cs" />
     <Compile Include="interfaceUI\Pageindex.cs" />
     <Compile Include="interfaceUI\Sourceuser.cs" />
+    <Compile Include="keybroadservice\Keybroadservice.cs" />
+    <Compile Include="keycommand\Keycommand.cs" />
     <Compile Include="Lockscreen.xaml.cs">
       <DependentUpon>Lockscreen.xaml</DependentUpon>
     </Compile>
@@ -110,6 +112,12 @@
     <Compile Include="Setupwindow.xaml.cs">
       <DependentUpon>Setupwindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="switcher\Finger.cs" />
+    <Compile Include="switcher\Handremote.cs" />
+    <Compile Include="switcher\Keystroke.cs" />
+    <Compile Include="switcher\ScreenInformation.cs" />
+    <Compile Include="switcher\Switcher.cs" />
+    <Compile Include="switcher\Switchercontrol.cs" />
     <Compile Include="switcher\Typecontrol.cs" />
     <Compile Include="Tool\Adbminihelper.cs" />
     <Compile Include="Tool\ADBTool.cs" />
@@ -244,6 +252,12 @@
   <ItemGroup>
     <Resource Include="imagecontrol\catch.png" />
     <Resource Include="imagecontrol\comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tccclient\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="document\controlandkey.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

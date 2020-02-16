@@ -60,52 +60,33 @@
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/.vs/CDCswitchserver/v16/Server/sqlite3/storage.ide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Bootwindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/CDCswitchserver.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/CDCswitchserver.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion1.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion1.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion2.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setion3.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Lockscreen.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Lockscreen.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Lockscreen.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Lockscreen.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Mainwindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Mainwindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setupwindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Setupwindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Tool/ADBTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Tool/ADBTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/Tool/Extensioncs.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/CDCswitchserver.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/appicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/appicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/bgtest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/image/pubgbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/interfaceUI/pageindex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/interfaceUI/pageindex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/datacontrol.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/datacontrol.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/sourceuser.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/bin/Debug/sourceuser.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/net/Socketworker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/net/Socketworker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/App.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Bootwindow.g.i.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_Content.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_Content.g.i.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.i.lref" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/CDCswitchserver_MarkupCompile.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion2.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setion3.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Lockscreen.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Lockscreen.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Lockscreen.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Lockscreen.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Lockscreen.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Lockscreen.g.i.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/Setupwindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/setupwindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/obj/Debug/setupwindow.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/packages.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/setupwindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../CDCswitchserver/CDCswitchserver/setupwindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -113,39 +94,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Viewstepadapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienone.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mienthree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/mientwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mienone.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mienthree.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mientwo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Socketworker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Socketworker.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,21 +130,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="115" column="44" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initSetup#0;class#MainActivity#0" />
+                <element signature="method#Backtopageconnect#0;class#MainActivity#0" />
+                <element signature="method#Movetopagechoose#0;class#MainActivity#0" />
+                <element signature="method#onTabSelected#0;class#MainActivity#0" />
+                <element signature="method#RequestPermision#0;class#MainActivity#0" />
+                <element signature="method#onActivityResult#0;class#MainActivity#0" />
+                <element signature="method#DialogPermission#0;class#MainActivity#0" />
+                <element signature="method#onResume#0;class#MainActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Socketworker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="231" column="32" selection-start-line="231" selection-start-column="20" selection-end-line="231" selection-end-column="32" />
+            <state relative-caret-position="1323">
+              <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1223#1224#0" expanded="true" />
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="method#TalkTogether#0;class#ConnectPc#0;class#Socketworker#0" />
+                <element signature="e#1404#1405#0" expanded="true" />
+                <element signature="e#1446#1447#0" expanded="true" />
                 <element signature="method#FirstTalk#0;class#ConnectPc#0;class#Socketworker#0" />
-                <element signature="e#6387#6388#0" expanded="true" />
-                <element signature="e#6422#6423#0" expanded="true" />
-                <element signature="e#6986#6987#0" expanded="true" />
-                <element signature="e#7029#7030#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -276,6 +243,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -287,46 +267,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="cdcswitchclient" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="cdcswitchclient" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cdcswitchclient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="192.168.1.2:5555" />
+    <property name="device.picker.selection" value="192.168.1.4:5555" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="F:/Metabolism.Project/Android.Server/Metabolism" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -451,7 +396,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.29500756" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.29500756" />
       <window_info id="Structure" order="2" sideWeight="0.5008183" side_tool="true" weight="0.20726173" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -461,14 +406,14 @@
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.49924356" weight="0.049099836" />
+      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.49924356" weight="0.39934534" />
       <window_info anchor="bottom" id="TODO" order="3" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50075644" side_tool="true" weight="0.47463176" />
       <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49924356" weight="0.2405892" />
-      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="8" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49924356" weight="0.3846154" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49924356" weight="0.34042552" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.32980332" />
@@ -505,16 +450,6 @@
     </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
         <watch expression="Neter.Datatranfer" />
@@ -775,12 +710,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="38" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -857,8 +792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+        <state relative-caret-position="526">
+          <caret line="115" column="44" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initSetup#0;class#MainActivity#0" />
@@ -869,25 +804,19 @@
             <element signature="method#onActivityResult#0;class#MainActivity#0" />
             <element signature="method#DialogPermission#0;class#MainActivity#0" />
             <element signature="method#onResume#0;class#MainActivity#0" />
-            <element signature="method#isServiceRunning#0;class#MainActivity#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bacunguyenandroid/cdcswitchclient/Net/Socketworker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="231" column="32" selection-start-line="231" selection-start-column="20" selection-end-line="231" selection-end-column="32" />
+        <state relative-caret-position="1323">
+          <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-            <element signature="e#1265#1266#0" expanded="true" />
-            <element signature="method#TalkTogether#0;class#ConnectPc#0;class#Socketworker#0" />
+            <element signature="e#1404#1405#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
             <element signature="method#FirstTalk#0;class#ConnectPc#0;class#Socketworker#0" />
-            <element signature="e#6387#6388#0" expanded="true" />
-            <element signature="e#6422#6423#0" expanded="true" />
-            <element signature="e#6986#6987#0" expanded="true" />
-            <element signature="e#7029#7030#0" expanded="true" />
           </folding>
         </state>
       </provider>

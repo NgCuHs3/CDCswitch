@@ -50,7 +50,8 @@ namespace CDCswitchserver.net
                     {
                     }
                 }
-                TalkTogether();
+                //nghe dữ liệu từ máy trạm
+                HearData();
             });
 
             ConnectThread.Start();
@@ -65,7 +66,11 @@ namespace CDCswitchserver.net
             Neter.Capturer.Connect(iep);
         }
 
-        
+        public void StopConnectminicap()
+        {
+            Neter.Capturer.Close();
+        }
+
         private Socket Connect(int Port)
         {
             var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -86,7 +91,7 @@ namespace CDCswitchserver.net
             }
         }
 
-        private void TalkTogether()
+        private void HearData()
         {
             try
             {
@@ -104,10 +109,9 @@ namespace CDCswitchserver.net
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {              
-                if (Ontalkstop != null) Ontalkstop();
-                
+                if (Ontalkstop != null) Ontalkstop();  
             }                
         }
 

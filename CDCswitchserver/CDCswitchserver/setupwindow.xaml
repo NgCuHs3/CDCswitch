@@ -497,16 +497,16 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Button Name="Up" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Top" Padding="0" Margin="0 14 0 0" Background="#2196F3" BorderBrush="#2196F3"  Click="Up_Click">
+                                <Button Width="40" Height="35" Grid.Column="1" VerticalAlignment="Top" Padding="0" Margin="0 14 0 0" Background="#2196F3" BorderBrush="#2196F3"  Click="Up_Click">
                                     <materialDesign:PackIcon Kind="ArrowUpBold" Height="20" Width="20"/>
                                 </Button>
-                                <Button Name="Down" Width="40" Height="35" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 0 14" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Down_Click" >
+                                <Button Width="40" Height="35" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 0 14" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Down_Click" >
                                     <materialDesign:PackIcon Kind="ArrowDownBold" Height="20" Width="20"/>
                                 </Button>
-                                <Button Name="Left"  Width="35" Height="40" Grid.Column="0" HorizontalAlignment="Right" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Left_Click">
+                                <Button Width="35" Height="40" Grid.Column="0" HorizontalAlignment="Right" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Left_Click">
                                     <materialDesign:PackIcon Kind="ArrowLeftBold" Height="20" Width="20"/>
                                 </Button>
-                                <Button Name="Right"  Width="35" Height="40" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Right_Click">
+                                <Button  Width="35" Height="40" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Padding="0" Background="#2196F3" BorderBrush="#2196F3" Click="Right_Click">
                                     <materialDesign:PackIcon Kind="ArrowRightBold" Height="20" Width="20"/>
                                 </Button>
                             </Grid>
